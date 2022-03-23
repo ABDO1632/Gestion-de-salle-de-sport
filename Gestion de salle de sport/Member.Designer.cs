@@ -40,7 +40,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(30, 39);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(697, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 147);
             this.dataGridView1.TabIndex = 0;
             // 
             // iconButton1
@@ -84,7 +84,7 @@
             this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(565, 334);
+            this.iconButton3.Location = new System.Drawing.Point(260, 225);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(50, 42);
             this.iconButton3.TabIndex = 3;
@@ -103,6 +103,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Member";
             this.Text = "Member";
+            this.Load += new System.EventHandler(this.Member_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

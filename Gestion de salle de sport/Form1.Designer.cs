@@ -284,7 +284,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(208, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(726, 86);
+            this.panel2.Size = new System.Drawing.Size(726, 80);
             this.panel2.TabIndex = 1;
             // 
             // paneChild
@@ -292,16 +292,16 @@
             this.paneChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.paneChild.Controls.Add(this.pictureBox9);
             this.paneChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneChild.Location = new System.Drawing.Point(208, 86);
+            this.paneChild.Location = new System.Drawing.Point(208, 80);
             this.paneChild.Name = "paneChild";
-            this.paneChild.Size = new System.Drawing.Size(726, 475);
+            this.paneChild.Size = new System.Drawing.Size(726, 481);
             this.paneChild.TabIndex = 2;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(244, 109);
+            this.pictureBox9.Location = new System.Drawing.Point(244, 112);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(261, 265);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
