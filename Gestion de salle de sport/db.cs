@@ -18,8 +18,8 @@ namespace Gestion_de_salle_de_sport
         public static void Ouvreconnexion()
         {
             string cs = ConfigurationManager.ConnectionStrings["Gestion_de_salle_de_sport"].ConnectionString.ToString();
-            cn = new SqlConnection(cryptage.DecryptSym(System.Convert.FromBase64String(cs), cryptage.cle, cryptage.iv));
-
+            // cn = new SqlConnection(cryptage.DecryptSym(System.Convert.FromBase64String(cs), cryptage.cle, cryptage.iv));
+            cn = new SqlConnection(cs);
             cn.Open();
 
 
