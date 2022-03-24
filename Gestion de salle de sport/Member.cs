@@ -29,15 +29,34 @@ namespace Gestion_de_salle_de_sport
             {
                 // double p = (Convert.ToDouble(reader2["nombre_heure"]) * 100) / Convert.ToDouble(lblNbHeure.Text);
                 Bitmap img = new Bitmap(dr["photo"].ToString());
+                //DataGridViewImageCell img = new DataGridViewImageCell();
+            /*    dataGridView1.Columns.Add(new DataGridViewImageColumn()
+                {
+                   // Text = "Say Hi",
+                   //// Tag = (Action<Person>)ClickHandler,
+                   // UseColumnTextForButtonValue = true,
+                   // AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+                   Image=img,
+                   ImageLayout=DataGridViewImageCellLayout.Zoom,
+                   
+                });*/
+                
                 Button b = ButtonDelete;
-                dataGridView1.Rows.Add(dr["idmembre"].ToString(), dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img, ButtonDelete);
-
+               // DataGridViewImageCell.ImageLayout = DataGridViewImageCellLayout.Zoom;
+               
+                dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), b);;
+                
             }
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("MSG!!!!205, 37, 74");
+        }
+
+        private void ButtonAddNewMember_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

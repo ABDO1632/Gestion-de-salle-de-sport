@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Member));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ButtonDelete = new FontAwesome.Sharp.IconButton();
-            this.ButtonModifier = new FontAwesome.Sharp.IconButton();
-            this.ButtonMoreInfo = new FontAwesome.Sharp.IconButton();
             this.idmembre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.nom_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenom_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.Buttons = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ButtonDelete = new FontAwesome.Sharp.IconButton();
+            this.ButtonModifier = new FontAwesome.Sharp.IconButton();
+            this.ButtonMoreInfo = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ButtonAddNewMember = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,57 +59,123 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idmembre,
+            this.photo,
             this.nom_membre,
             this.prenom_membre,
             this.tel_membre,
             this.email_membre,
-            this.photo,
             this.Buttons});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView1.RowTemplate.Height = 150;
             this.dataGridView1.Size = new System.Drawing.Size(882, 324);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // idmembre
+            // 
+            this.idmembre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.idmembre.FillWeight = 2.896616F;
+            this.idmembre.HeaderText = "id";
+            this.idmembre.MinimumWidth = 28;
+            this.idmembre.Name = "idmembre";
+            this.idmembre.Width = 28;
+            // 
+            // photo
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle8.NullValue")));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(10);
+            this.photo.DefaultCellStyle = dataGridViewCellStyle8;
+            this.photo.FillWeight = 6.833045F;
+            this.photo.HeaderText = "photo";
+            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
+            this.photo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.photo.MinimumWidth = 20;
+            this.photo.Name = "photo";
+            this.photo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.photo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // nom_membre
+            // 
+            this.nom_membre.FillWeight = 6.833045F;
+            this.nom_membre.HeaderText = "First Name";
+            this.nom_membre.MinimumWidth = 20;
+            this.nom_membre.Name = "nom_membre";
+            // 
+            // prenom_membre
+            // 
+            this.prenom_membre.FillWeight = 6.833045F;
+            this.prenom_membre.HeaderText = "Last Name";
+            this.prenom_membre.MinimumWidth = 20;
+            this.prenom_membre.Name = "prenom_membre";
+            // 
+            // tel_membre
+            // 
+            this.tel_membre.FillWeight = 6.833045F;
+            this.tel_membre.HeaderText = "Phone Number";
+            this.tel_membre.MinimumWidth = 20;
+            this.tel_membre.Name = "tel_membre";
+            // 
+            // email_membre
+            // 
+            this.email_membre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.email_membre.FillWeight = 37.44002F;
+            this.email_membre.HeaderText = "Email";
+            this.email_membre.MinimumWidth = 22;
+            this.email_membre.Name = "email_membre";
+            this.email_membre.Width = 200;
+            // 
+            // Buttons
+            // 
+            this.Buttons.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Buttons.FillWeight = 6.833045F;
+            this.Buttons.HeaderText = "Buttons";
+            this.Buttons.MinimumWidth = 10;
+            this.Buttons.Name = "Buttons";
+            this.Buttons.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Buttons.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Buttons.Width = 50;
             // 
             // ButtonDelete
             // 
@@ -159,68 +226,41 @@
             this.ButtonMoreInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonMoreInfo.UseVisualStyleBackColor = false;
             // 
-            // idmembre
-            // 
-            this.idmembre.FillWeight = 10.64312F;
-            this.idmembre.HeaderText = "idmembre";
-            this.idmembre.MinimumWidth = 20;
-            this.idmembre.Name = "idmembre";
-            // 
-            // nom_membre
-            // 
-            this.nom_membre.FillWeight = 10.64312F;
-            this.nom_membre.HeaderText = "First Name";
-            this.nom_membre.MinimumWidth = 20;
-            this.nom_membre.Name = "nom_membre";
-            // 
-            // prenom_membre
-            // 
-            this.prenom_membre.FillWeight = 10.64312F;
-            this.prenom_membre.HeaderText = "Last Name";
-            this.prenom_membre.Name = "prenom_membre";
-            // 
-            // tel_membre
-            // 
-            this.tel_membre.FillWeight = 10.64312F;
-            this.tel_membre.HeaderText = "Phone Number";
-            this.tel_membre.Name = "tel_membre";
-            // 
-            // email_membre
-            // 
-            this.email_membre.FillWeight = 10.64312F;
-            this.email_membre.HeaderText = "Email";
-            this.email_membre.Name = "email_membre";
-            // 
-            // photo
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10);
-            this.photo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.photo.FillWeight = 10.64312F;
-            this.photo.HeaderText = "photo";
-            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
-            this.photo.MinimumWidth = 70;
-            this.photo.Name = "photo";
-            this.photo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.photo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Buttons
-            // 
-            this.Buttons.FillWeight = 10.64312F;
-            this.Buttons.HeaderText = "Buttons";
-            this.Buttons.Name = "Buttons";
-            this.Buttons.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Buttons.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ButtonAddNewMember);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(882, 126);
             this.panel2.TabIndex = 5;
+            // 
+            // ButtonAddNewMember
+            // 
+            this.ButtonAddNewMember.ActiveBorderThickness = 1;
+            this.ButtonAddNewMember.ActiveCornerRadius = 50;
+            this.ButtonAddNewMember.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.ButtonAddNewMember.ActiveForecolor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonAddNewMember.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.ButtonAddNewMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.ButtonAddNewMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonAddNewMember.BackgroundImage")));
+            this.ButtonAddNewMember.ButtonText = "Add New Member";
+            this.ButtonAddNewMember.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAddNewMember.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAddNewMember.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonAddNewMember.IdleBorderThickness = 1;
+            this.ButtonAddNewMember.IdleCornerRadius = 50;
+            this.ButtonAddNewMember.IdleFillColor = System.Drawing.Color.Transparent;
+            this.ButtonAddNewMember.IdleForecolor = System.Drawing.Color.WhiteSmoke;
+            this.ButtonAddNewMember.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.ButtonAddNewMember.Location = new System.Drawing.Point(422, 35);
+            this.ButtonAddNewMember.Margin = new System.Windows.Forms.Padding(5);
+            this.ButtonAddNewMember.Name = "ButtonAddNewMember";
+            this.ButtonAddNewMember.Size = new System.Drawing.Size(213, 64);
+            this.ButtonAddNewMember.TabIndex = 1;
+            this.ButtonAddNewMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtonAddNewMember.Click += new System.EventHandler(this.ButtonAddNewMember_Click);
             // 
             // panel3
             // 
@@ -232,14 +272,24 @@
             this.panel3.Size = new System.Drawing.Size(414, 126);
             this.panel3.TabIndex = 0;
             // 
-            // panel4
+            // iconButton2
             // 
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 126);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(882, 324);
-            this.panel4.TabIndex = 6;
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 40;
+            this.iconButton2.Location = new System.Drawing.Point(317, 47);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(47, 41);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // bunifuMaterialTextbox1
             // 
@@ -249,36 +299,25 @@
             this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.DimGray;
             this.bunifuMaterialTextbox1.HintText = "Search for a member";
             this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
             this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(60, 44);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(43, 44);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
             this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(250, 44);
             this.bunifuMaterialTextbox1.TabIndex = 0;
-            this.bunifuMaterialTextbox1.Text = "bunifuMaterialTextbox1";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // iconButton2
+            // panel4
             // 
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.Location = new System.Drawing.Point(317, 47);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(47, 41);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 126);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(882, 324);
+            this.panel4.TabIndex = 6;
             // 
             // Member
             // 
@@ -308,17 +347,18 @@
         private FontAwesome.Sharp.IconButton ButtonDelete;
         private FontAwesome.Sharp.IconButton ButtonModifier;
         private FontAwesome.Sharp.IconButton ButtonMoreInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmembre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_membre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenom_membre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tel_membre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email_membre;
-        private System.Windows.Forms.DataGridViewImageColumn photo;
-        private System.Windows.Forms.DataGridViewButtonColumn Buttons;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmembre;
+        private System.Windows.Forms.DataGridViewImageColumn photo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_membre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenom_membre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tel_membre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email_membre;
+        private System.Windows.Forms.DataGridViewButtonColumn Buttons;
+        private Bunifu.Framework.UI.BunifuThinButton2 ButtonAddNewMember;
     }
 }
