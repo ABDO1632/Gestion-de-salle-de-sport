@@ -13,10 +13,14 @@ namespace Gestion_de_salle_de_sport
     {
         public Form1()
         {
+            frm = this;
             InitializeComponent();
         }
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
+       
+       
+
+        public Form activeForm = null;
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
             activeForm = childForm;
@@ -32,20 +36,48 @@ namespace Gestion_de_salle_de_sport
         {
 
         }
+        static Form1 frm =new Form1();
 
+        public static void ClickedM()
+        {
+            Form1.frm.openChildForm(new AddMember());
+        }
+        public static void ClickedE()
+        {
+            Form1.frm.openChildForm(new AddNewEquipment());
+        }
+        public static void ShowNewForm(object sender, EventArgs e)
+        {
+            
+            // iconButton1.Click();
+            
+        }
         private void iconButton1_Click(object sender, EventArgs e)
         {
             openChildForm(new Member());
+            
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
+            
             openChildForm(new Equipment());
+            
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
             openChildForm(new Statistics());
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

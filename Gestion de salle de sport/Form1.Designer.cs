@@ -91,6 +91,7 @@
             this.iconButton8.Text = "Exit                ";
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton8.UseVisualStyleBackColor = true;
+            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
             // 
             // iconButton7
             // 
@@ -133,6 +134,7 @@
             this.iconButton6.Text = "Menu food";
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // iconButton5
             // 

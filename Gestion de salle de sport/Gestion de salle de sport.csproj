@@ -73,6 +73,12 @@
     <Compile Include="AddMember.Designer.cs">
       <DependentUpon>AddMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewEquipment.Designer.cs">
+      <DependentUpon>AddNewEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="cryptage.cs" />
     <Compile Include="db.cs" />
     <Compile Include="Equipment.cs">
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="AddMember.resx">
       <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewEquipment.resx">
+      <DependentUpon>AddNewEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>

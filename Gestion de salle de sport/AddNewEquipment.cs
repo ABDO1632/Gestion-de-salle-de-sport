@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace Gestion_de_salle_de_sport
 {
-    public partial class Equipment : Form
+    public partial class AddNewEquipment : Form
     {
-        public Equipment()
+        public AddNewEquipment()
         {
             InitializeComponent();
-        }
-
-        private void ButtonAddNewEquipment_Click(object sender, EventArgs e)
-        {
-            Form1.ClickedE();
         }
     }
 }

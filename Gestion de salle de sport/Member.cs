@@ -56,7 +56,11 @@ namespace Gestion_de_salle_de_sport
 
         private void ButtonAddNewMember_Click(object sender, EventArgs e)
         {
-
+            
+           // Form1 f=new Form1();
+            Form1.ClickedM();
+            
+            //this.Hide();
         }
     }
 }
