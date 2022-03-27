@@ -35,28 +35,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Member));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ButtonDelete = new FontAwesome.Sharp.IconButton();
+            this.ButtonModifier = new FontAwesome.Sharp.IconButton();
+            this.ButtonMoreInfo = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ButtonAddNewMember = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.idmembre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.nom_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenom_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email_membre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Buttons = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ButtonDelete = new FontAwesome.Sharp.IconButton();
-            this.ButtonModifier = new FontAwesome.Sharp.IconButton();
-            this.ButtonMoreInfo = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ButtonAddNewMember = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Modify = new System.Windows.Forms.DataGridViewImageColumn();
+            this.CheckHistory = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -88,7 +92,10 @@
             this.prenom_membre,
             this.tel_membre,
             this.email_membre,
-            this.Buttons});
+            this.Modify,
+            this.CheckHistory,
+            this.Delete});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,71 +120,11 @@
             this.dataGridView1.RowTemplate.Height = 150;
             this.dataGridView1.Size = new System.Drawing.Size(882, 324);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idmembre
-            // 
-            this.idmembre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.idmembre.FillWeight = 2.896616F;
-            this.idmembre.HeaderText = "id";
-            this.idmembre.MinimumWidth = 28;
-            this.idmembre.Name = "idmembre";
-            this.idmembre.Width = 28;
-            // 
-            // photo
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10);
-            this.photo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.photo.FillWeight = 6.833045F;
-            this.photo.HeaderText = "photo";
-            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
-            this.photo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.photo.MinimumWidth = 20;
-            this.photo.Name = "photo";
-            this.photo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.photo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // nom_membre
-            // 
-            this.nom_membre.FillWeight = 6.833045F;
-            this.nom_membre.HeaderText = "First Name";
-            this.nom_membre.MinimumWidth = 20;
-            this.nom_membre.Name = "nom_membre";
-            // 
-            // prenom_membre
-            // 
-            this.prenom_membre.FillWeight = 6.833045F;
-            this.prenom_membre.HeaderText = "Last Name";
-            this.prenom_membre.MinimumWidth = 20;
-            this.prenom_membre.Name = "prenom_membre";
-            // 
-            // tel_membre
-            // 
-            this.tel_membre.FillWeight = 6.833045F;
-            this.tel_membre.HeaderText = "Phone Number";
-            this.tel_membre.MinimumWidth = 20;
-            this.tel_membre.Name = "tel_membre";
-            // 
-            // email_membre
-            // 
-            this.email_membre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.email_membre.FillWeight = 37.44002F;
-            this.email_membre.HeaderText = "Email";
-            this.email_membre.MinimumWidth = 22;
-            this.email_membre.Name = "email_membre";
-            this.email_membre.Width = 200;
-            // 
-            // Buttons
-            // 
-            this.Buttons.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Buttons.FillWeight = 6.833045F;
-            this.Buttons.HeaderText = "Buttons";
-            this.Buttons.MinimumWidth = 10;
-            this.Buttons.Name = "Buttons";
-            this.Buttons.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Buttons.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Buttons.Width = 50;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
+            this.dataGridView1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
+            this.dataGridView1.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseMove);
+
             // 
             // ButtonDelete
             // 
@@ -230,6 +177,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -237,6 +186,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(882, 126);
             this.panel2.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(441, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 56);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ButtonAddNewMember);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(646, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(236, 126);
+            this.panel1.TabIndex = 2;
             // 
             // ButtonAddNewMember
             // 
@@ -321,14 +289,97 @@
             this.panel4.Size = new System.Drawing.Size(882, 324);
             this.panel4.TabIndex = 6;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.Controls.Add(this.ButtonAddNewMember);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(646, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 126);
-            this.panel1.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
+            // 
+            // idmembre
+            // 
+            this.idmembre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.idmembre.FillWeight = 2.896616F;
+            this.idmembre.HeaderText = "id";
+            this.idmembre.MinimumWidth = 28;
+            this.idmembre.Name = "idmembre";
+            this.idmembre.Width = 28;
+            // 
+            // photo
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10);
+            this.photo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.photo.FillWeight = 6.833045F;
+            this.photo.HeaderText = "photo";
+            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
+            this.photo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.photo.MinimumWidth = 20;
+            this.photo.Name = "photo";
+            this.photo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.photo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // nom_membre
+            // 
+            this.nom_membre.FillWeight = 6.833045F;
+            this.nom_membre.HeaderText = "First Name";
+            this.nom_membre.MinimumWidth = 20;
+            this.nom_membre.Name = "nom_membre";
+            // 
+            // prenom_membre
+            // 
+            this.prenom_membre.FillWeight = 6.833045F;
+            this.prenom_membre.HeaderText = "Last Name";
+            this.prenom_membre.MinimumWidth = 20;
+            this.prenom_membre.Name = "prenom_membre";
+            // 
+            // tel_membre
+            // 
+            this.tel_membre.FillWeight = 6.833045F;
+            this.tel_membre.HeaderText = "Phone Number";
+            this.tel_membre.MinimumWidth = 20;
+            this.tel_membre.Name = "tel_membre";
+            // 
+            // email_membre
+            // 
+            this.email_membre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.email_membre.FillWeight = 37.44002F;
+            this.email_membre.HeaderText = "Email";
+            this.email_membre.MinimumWidth = 22;
+            this.email_membre.Name = "email_membre";
+            this.email_membre.Width = 200;
+            // 
+            // Modify
+            // 
+            this.Modify.FillWeight = 6.833045F;
+            this.Modify.HeaderText = "Modify";
+            this.Modify.MinimumWidth = 10;
+            this.Modify.Name = "Modify";
+            this.Modify.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Modify.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // CheckHistory
+            // 
+            this.CheckHistory.FillWeight = 6.833045F;
+            this.CheckHistory.HeaderText = "CheckHistory";
+            this.CheckHistory.MinimumWidth = 10;
+            this.CheckHistory.Name = "CheckHistory";
+            this.CheckHistory.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CheckHistory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Delete
+            // 
+            this.Delete.FillWeight = 6.833045F;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 10;
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Member
             // 
@@ -346,9 +397,10 @@
             this.Load += new System.EventHandler(this.Member_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -364,14 +416,18 @@
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private Bunifu.Framework.UI.BunifuThinButton2 ButtonAddNewMember;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmembre;
         private System.Windows.Forms.DataGridViewImageColumn photo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_membre;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenom_membre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tel_membre;
         private System.Windows.Forms.DataGridViewTextBoxColumn email_membre;
-        private System.Windows.Forms.DataGridViewButtonColumn Buttons;
-        private Bunifu.Framework.UI.BunifuThinButton2 ButtonAddNewMember;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewImageColumn Modify;
+        private System.Windows.Forms.DataGridViewImageColumn CheckHistory;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }
