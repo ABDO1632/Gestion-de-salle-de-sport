@@ -44,7 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.paneChild = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -293,7 +292,6 @@
             // paneChild
             // 
             this.paneChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.paneChild.Controls.Add(this.checkBox1);
             this.paneChild.Controls.Add(this.pictureBox9);
             this.paneChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneChild.Location = new System.Drawing.Point(208, 80);
@@ -311,16 +309,6 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(97, 77);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -340,7 +328,6 @@
             this.panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneChild.ResumeLayout(false);
-            this.paneChild.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
@@ -363,7 +350,6 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -117,26 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAALHSURBVGhD7ZZLaxNRGIY/NxWUCuJPKCjS4sruFBQUCoIUQV2KoD9BpLvQpIm5NJdJc28mTUPN
-        pUmIoYpQQlOptu7sQsX+AW9p0triqs3xS/wiXYg5ScY5Z5EHXmYx+V6ekzlzgT59ZCO/MgaLZRVSpS1I
-        Lm/DwssKJF5sQfy5CrFnY/QrCcmvjEB2dQPlGaRLDOUZyjOUZzC/xGCuyCBWYKDm1yGcHaYpSciVr6L8
-        Tlv5aJ5BJMsgnNmBQPIKTQsms3YO5WsdyDMIphqpwUzqLLUIgrFjkFt927F8IMnAt8DAm9hodggjX77e
-        gzwDJd7INWoTQLYc60neM4dRo9QmgHTpU0/ybhUT/UhtAkgu7/Uk74oycM7+oDYB9C7PYDrCqE0AWsg7
-        wgIXoIW8PShwAVrI2wICFpBYuoHyFU3krX4GT3xfwaxcpnYdiBffaSjPwDLTyGtq14FYYVdTebO3kSq1
-        60A0/0FjeYzyntp1YDY3obE8gynlMbXrQCYzAKFUFuXrGsjXMRkwGAaoXUd8Txc1+OfT1CYAb+J+j/J4
-        9NyjNgHY50+i/Peu5ac838AQOkFtgnCrxi7lGRg9BmoRiKIcR/nNjuVNns3mrBTYIxdQ/ksH8p/xOELT
-        kmALDXHK49ZRhmhKMnjkTW6Bn8/t4JGXdgEG5RSXvNGF28w6SFMSYfHe5ZJvZNJ5h6Ykwewdx1S55H+n
-        gucu0bRALL5R3DZZFMcPMm75Vg4xGTA5L1KbTlijg3izPsSsc+/59nkDk64H//fecIRH8Tkfw0flPvfT
-        5u+y/8oeGN2qtlfFGR7GN2yR+yXVvfzR1PGKFPB4niy6ZDp0G+V/6ix/NPuYW2TTIY7QOMofCJRv5QC3
-        1U2y4sQ8cwbldyWQb6UGFv9psuPAHpyQSJ7ifkR2HNgCa3LJN/OK7Diw+quSyTeyTXZ9+vT5A8AvgYvY
-        nBtl4SQAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="openFileDialog_Photo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="idmembreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="nom_membreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="prenom_membreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="tel_membreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="email_membreLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="date_naissLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="health_statueLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="heightLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="weightLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="fatLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Sport.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Amount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Payement_Date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Expire_Date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

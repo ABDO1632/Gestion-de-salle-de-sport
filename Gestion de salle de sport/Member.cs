@@ -72,7 +72,7 @@ namespace Gestion_de_salle_de_sport
 
         private void ButtonAddNewMember_Click(object sender, EventArgs e)
         {
-            
+            roleFormMember = "Add";
            // Form1 f=new Form1();
             Form1.ClickedM();
             
@@ -84,21 +84,46 @@ namespace Gestion_de_salle_de_sport
             MessageBox.Show("NNzizia");
         }
 
-        
 
+       public static string id = "1";
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
-        }
 
-        private void dataGridView1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            //MessageBox.Show(dataGridView1.Columns[e.ColumnIndex].ToString()+"////"+dataGridView1.Rows[e.RowIndex].ToString());
-           // MessageBox.Show(dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString());
-            //MessageBox.Show(e.Button.ToString());
-           
+            var senderGrid = (DataGridView)sender;
+
+            
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
+                e.RowIndex >= 0)
+            {
+                //TODO - Button Clicked - Execute Code Here
+                //MessageBox.Show("clicked!");
+                if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["CheckHistory"])
+                {
+                    //MessageBox.Show(" CheckHistory!!!!"+ senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    id = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    MemberHistory mb = new MemberHistory();
+                    mb.ShowDialog();
+                }
+                if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Modify"])
+                {
+                    id = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    roleFormMember = "Modify";
+                    AddMember ad = new AddMember();
+                    ad.ShowDialog();
+                    
+                    //Form1.ClickedM();
+                }
+                if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"])
+                {
+                    id = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    MessageBox.Show(" Delete!!!!");
+                }
+            }
+
+
         }
+        //
+        public static string roleFormMember = "";
 
         private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
