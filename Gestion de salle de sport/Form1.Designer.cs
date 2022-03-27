@@ -43,9 +43,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.paneChild = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -303,6 +303,17 @@
             this.paneChild.Size = new System.Drawing.Size(726, 481);
             this.paneChild.TabIndex = 2;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.ForeColor = System.Drawing.Color.DarkRed;
+            this.button2.Location = new System.Drawing.Point(345, 33);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(196, 53);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -322,15 +333,6 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(308, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 53);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
