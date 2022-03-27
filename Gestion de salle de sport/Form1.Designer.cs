@@ -44,6 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.paneChild = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -292,6 +293,7 @@
             // paneChild
             // 
             this.paneChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.paneChild.Controls.Add(this.label1);
             this.paneChild.Controls.Add(this.pictureBox9);
             this.paneChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneChild.Location = new System.Drawing.Point(208, 80);
@@ -309,6 +311,15 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(231, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "last";
             // 
             // Form1
             // 
@@ -328,6 +339,7 @@
             this.panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneChild.ResumeLayout(false);
+            this.paneChild.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
@@ -350,6 +362,7 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label1;
     }
 }
 
