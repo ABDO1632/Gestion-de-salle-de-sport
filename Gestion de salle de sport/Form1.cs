@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Gestion_de_salle_de_sport
@@ -16,8 +10,8 @@ namespace Gestion_de_salle_de_sport
             frm = this;
             InitializeComponent();
         }
-       
-       
+
+
 
         public Form activeForm = null;
         public void openChildForm(Form childForm)
@@ -36,7 +30,7 @@ namespace Gestion_de_salle_de_sport
         {
 
         }
-        static Form1 frm =new Form1();
+        static Form1 frm = new Form1();
 
         public static void ClickedM()
         {
@@ -48,21 +42,21 @@ namespace Gestion_de_salle_de_sport
         }
         public static void ShowNewForm(object sender, EventArgs e)
         {
-            
+
             // iconButton1.Click();
-            
+
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
             openChildForm(new Member());
-            
+
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            
+
             openChildForm(new Equipment());
-            
+
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

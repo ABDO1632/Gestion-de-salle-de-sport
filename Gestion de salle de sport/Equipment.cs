@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 namespace Gestion_de_salle_de_sport
 {
     public partial class Equipment : Form
@@ -19,6 +14,7 @@ namespace Gestion_de_salle_de_sport
         SqlCommand com = new SqlCommand();
         private void ButtonAddNewEquipment_Click(object sender, EventArgs e)
         {
+            Member.roleFormMember = "Add";
             Form1.ClickedE();
         }
 
@@ -26,18 +22,106 @@ namespace Gestion_de_salle_de_sport
         {
             dr = db.remplir("select id_equipement,photo, nom_equipement, muscl_target, etat, prix,quantity from equipement");
 
-            //DataTable t = new DataTable();
-            //t.Load(dr);
-            // dataGridView1.DataSource = t;
-            //dataGridView1.Rows.Clear();
             while (dr.Read())
             {
                 Bitmap img = new Bitmap(dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("delete_trash.png");
+                Bitmap img2 = new Bitmap("modify.png");
+                dataGridView1.Rows.Add(dr["id_equipement"].ToString(), img, dr["nom_equipement"].ToString(), dr["muscl_target"].ToString(), dr["etat"].ToString(), dr["prix"].ToString(), dr["quantity"].ToString(), img2, img1); ;
+
+            }
+        }
+
+        private void dataGridView1_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex >= 0)
+                {
+
+                    if (dataGridView1.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"] && e.RowIndex >= 0 && e.RowIndex >= 0)
+                    {
+                        dataGridView1.Cursor = Cursors.Hand;
+                        dataGridView1[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.FromArgb(205, 37, 74);
+
+                    }
+                    if (dataGridView1.Columns[e.ColumnIndex] == dataGridView1.Columns["Modify"] && e.RowIndex >= 0)
+                    {
+                        dataGridView1.Cursor = Cursors.Hand;
+                        dataGridView1[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.FromArgb(205, 37, 74);
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex >= 0)
+                {
+                    dataGridView1.Cursor = Cursors.Default;
+
+                    if (dataGridView1.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"] && e.RowIndex >= 0)
+                    {
+                        dataGridView1[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.Empty;
+                    }
+                    if (dataGridView1.Columns[e.ColumnIndex] == dataGridView1.Columns["Modify"] && e.RowIndex >= 0)
+                    {
+                        dataGridView1[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.Empty;
+                    }
+                }
 
 
-                Button b = new Button();
-                dataGridView1.Rows.Add(dr["id_equipement"].ToString(), img, dr["nom_equipement"].ToString(), dr["muscl_target"].ToString(), dr["etat"].ToString(), dr["prix"].ToString(), dr["quantity"].ToString(), b); ;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + " Leave");
+            }
+        }
+        public static string idEquipment = "1";
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
+                e.RowIndex >= 0)
+            {
+                
+                if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Modify"])
+                {
+                    idEquipment = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    Member.roleFormMember = "Modify";
+                    AddNewEquipment ad = new AddNewEquipment();
+                    ad.ShowDialog();
+                }
+                if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"])
+                {
+                    idEquipment = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    MessageBox.Show(" Delete!!!!");
+                }
+            }
+        }
 
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            dr = db.remplir("select id_equipement,photo, nom_equipement, muscl_target, etat, prix,quantity from equipement where nom_equipement like '%" + txtNameEquipment.Text + "%'");
+            if (dataGridView1.Rows.Count >= 1)
+            {
+                dataGridView1.Rows.Clear();
+            }
+            while (dr.Read())
+            {
+                Bitmap img = new Bitmap(dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("delete_trash.png");
+                Bitmap img2 = new Bitmap("modify.png");
+                Bitmap img3 = new Bitmap("documents.png");
+                dataGridView1.Rows.Add(dr["id_equipement"].ToString(), img, dr["nom_equipement"].ToString(), dr["muscl_target"].ToString(), dr["etat"].ToString(), dr["prix"].ToString(), dr["quantity"].ToString(), img2, img1); ;
             }
         }
     }

@@ -33,13 +33,14 @@
             this.button_choosePhoto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButtonAddEquipment = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox8 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtQte = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtState = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtMusclTarger = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.iconButtonModifyEquipment = new FontAwesome.Sharp.IconButton();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,11 +74,13 @@
             this.button_choosePhoto.TabIndex = 38;
             this.button_choosePhoto.Text = "CHOOSE PHOTO";
             this.button_choosePhoto.UseVisualStyleBackColor = false;
+            this.button_choosePhoto.Click += new System.EventHandler(this.button_choosePhoto_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(415, 220);
@@ -87,145 +90,168 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.iconButtonModifyEquipment);
+            this.panel1.Controls.Add(this.iconButtonAddEquipment);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(886, 78);
             this.panel1.TabIndex = 6;
             // 
-            // iconButton1
+            // iconButtonAddEquipment
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
-            this.iconButton1.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(272, 78);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Add New Equipment";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButtonAddEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonAddEquipment.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButtonAddEquipment.FlatAppearance.BorderSize = 0;
+            this.iconButtonAddEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAddEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAddEquipment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonAddEquipment.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
+            this.iconButtonAddEquipment.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonAddEquipment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAddEquipment.Location = new System.Drawing.Point(0, 0);
+            this.iconButtonAddEquipment.Name = "iconButtonAddEquipment";
+            this.iconButtonAddEquipment.Size = new System.Drawing.Size(272, 78);
+            this.iconButtonAddEquipment.TabIndex = 0;
+            this.iconButtonAddEquipment.Text = "Add New Equipment";
+            this.iconButtonAddEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonAddEquipment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonAddEquipment.UseVisualStyleBackColor = false;
+            this.iconButtonAddEquipment.Click += new System.EventHandler(this.iconButtonAddEquipment_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox4);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox8);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox3);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox2);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel2.Controls.Add(this.txtQte);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.txtState);
+            this.panel2.Controls.Add(this.txtMusclTarger);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(471, 445);
             this.panel2.TabIndex = 8;
             // 
-            // bunifuMaterialTextbox4
+            // txtQte
             // 
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox4.HintText = "Enter Quantity";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(0, 196);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(471, 49);
-            this.bunifuMaterialTextbox4.TabIndex = 6;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtQte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtQte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtQte.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtQte.HintForeColor = System.Drawing.Color.DimGray;
+            this.txtQte.HintText = "Enter Quantity";
+            this.txtQte.isPassword = false;
+            this.txtQte.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtQte.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.txtQte.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtQte.LineThickness = 3;
+            this.txtQte.Location = new System.Drawing.Point(0, 196);
+            this.txtQte.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQte.Name = "txtQte";
+            this.txtQte.Size = new System.Drawing.Size(471, 49);
+            this.txtQte.TabIndex = 6;
+            this.txtQte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox8
+            // txtPrice
             // 
-            this.bunifuMaterialTextbox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox8.HintText = "Enter Price";
-            this.bunifuMaterialTextbox8.isPassword = false;
-            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox8.LineThickness = 3;
-            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(0, 147);
-            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox8.Name = "bunifuMaterialTextbox8";
-            this.bunifuMaterialTextbox8.Size = new System.Drawing.Size(471, 49);
-            this.bunifuMaterialTextbox8.TabIndex = 4;
-            this.bunifuMaterialTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPrice.HintForeColor = System.Drawing.Color.DimGray;
+            this.txtPrice.HintText = "Enter Price";
+            this.txtPrice.isPassword = false;
+            this.txtPrice.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtPrice.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.txtPrice.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtPrice.LineThickness = 3;
+            this.txtPrice.Location = new System.Drawing.Point(0, 147);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(471, 49);
+            this.txtPrice.TabIndex = 4;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox3
+            // txtState
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox3.HintText = "Enter State";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(0, 98);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(471, 49);
-            this.bunifuMaterialTextbox3.TabIndex = 3;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtState.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtState.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtState.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtState.HintForeColor = System.Drawing.Color.DimGray;
+            this.txtState.HintText = "Enter State";
+            this.txtState.isPassword = false;
+            this.txtState.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtState.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.txtState.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtState.LineThickness = 3;
+            this.txtState.Location = new System.Drawing.Point(0, 98);
+            this.txtState.Margin = new System.Windows.Forms.Padding(4);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(471, 49);
+            this.txtState.TabIndex = 3;
+            this.txtState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox2
+            // txtMusclTarger
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox2.HintText = "Enter muscl_target";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(0, 49);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(471, 49);
-            this.bunifuMaterialTextbox2.TabIndex = 2;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMusclTarger.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMusclTarger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtMusclTarger.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtMusclTarger.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtMusclTarger.HintForeColor = System.Drawing.Color.DimGray;
+            this.txtMusclTarger.HintText = "Enter muscl_target";
+            this.txtMusclTarger.isPassword = false;
+            this.txtMusclTarger.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtMusclTarger.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.txtMusclTarger.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtMusclTarger.LineThickness = 3;
+            this.txtMusclTarger.Location = new System.Drawing.Point(0, 49);
+            this.txtMusclTarger.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMusclTarger.Name = "txtMusclTarger";
+            this.txtMusclTarger.Size = new System.Drawing.Size(471, 49);
+            this.txtMusclTarger.TabIndex = 2;
+            this.txtMusclTarger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox1
+            // txtName
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.DimGray;
-            this.bunifuMaterialTextbox1.HintText = "Enter Name";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(471, 49);
-            this.bunifuMaterialTextbox1.TabIndex = 1;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtName.HintForeColor = System.Drawing.Color.DimGray;
+            this.txtName.HintText = "Enter Name";
+            this.txtName.isPassword = false;
+            this.txtName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtName.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.txtName.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.txtName.LineThickness = 3;
+            this.txtName.Location = new System.Drawing.Point(0, 0);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(471, 49);
+            this.txtName.TabIndex = 1;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // iconButtonModifyEquipment
+            // 
+            this.iconButtonModifyEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonModifyEquipment.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButtonModifyEquipment.FlatAppearance.BorderSize = 0;
+            this.iconButtonModifyEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonModifyEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonModifyEquipment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonModifyEquipment.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
+            this.iconButtonModifyEquipment.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonModifyEquipment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonModifyEquipment.Location = new System.Drawing.Point(272, 0);
+            this.iconButtonModifyEquipment.Name = "iconButtonModifyEquipment";
+            this.iconButtonModifyEquipment.Size = new System.Drawing.Size(272, 78);
+            this.iconButtonModifyEquipment.TabIndex = 1;
+            this.iconButtonModifyEquipment.Text = "Modify Equipment";
+            this.iconButtonModifyEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonModifyEquipment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonModifyEquipment.UseVisualStyleBackColor = false;
+            this.iconButtonModifyEquipment.Click += new System.EventHandler(this.iconButtonModifyEquipment_Click);
             // 
             // AddNewEquipment
             // 
@@ -238,6 +264,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddNewEquipment";
             this.Text = "AddNewEquipment";
+            this.Load += new System.EventHandler(this.AddNewEquipment_Load);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -252,12 +279,13 @@
         private System.Windows.Forms.Button button_choosePhoto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtonAddEquipment;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtQte;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtState;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMusclTarger;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
+        private FontAwesome.Sharp.IconButton iconButtonModifyEquipment;
     }
 }

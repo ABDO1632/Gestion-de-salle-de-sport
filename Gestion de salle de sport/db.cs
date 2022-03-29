@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+﻿using System.Configuration;
 using System.Data.SqlClient;
-using System.Configuration;
 namespace Gestion_de_salle_de_sport
 {
 
@@ -37,7 +32,7 @@ namespace Gestion_de_salle_de_sport
             Ouvreconnexion();
             com = new SqlCommand(req, cn);
             com.ExecuteReader();
-            
+
         }
         public static SqlDataReader remplir(string req)
         {

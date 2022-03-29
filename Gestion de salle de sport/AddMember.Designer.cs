@@ -47,6 +47,8 @@
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtLName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.openFileDialog_Photo = new System.Windows.Forms.OpenFileDialog();
+            this.imageTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -129,19 +131,20 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 498);
+            this.panel3.Location = new System.Drawing.Point(0, 574);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(863, 30);
             this.panel3.TabIndex = 3;
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.imageTextBox);
             this.panel5.Controls.Add(this.button_choosePhoto);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(448, 78);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(415, 420);
+            this.panel5.Size = new System.Drawing.Size(415, 496);
             this.panel5.TabIndex = 5;
             // 
             // button_choosePhoto
@@ -177,6 +180,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.txtFat);
             this.panel2.Controls.Add(this.txtWeight);
             this.panel2.Controls.Add(this.txtHeight);
@@ -189,7 +193,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(448, 420);
+            this.panel2.Size = new System.Drawing.Size(448, 496);
             this.panel2.TabIndex = 5;
             // 
             // txtFat
@@ -350,12 +354,34 @@
             // 
             this.openFileDialog_Photo.FileName = "openFileDialog1";
             // 
+            // imageTextBox
+            // 
+            this.imageTextBox.Location = new System.Drawing.Point(0, 274);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.Size = new System.Drawing.Size(168, 20);
+            this.imageTextBox.TabIndex = 39;
+            this.imageTextBox.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(0, 441);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(448, 21);
+            this.comboBox1.TabIndex = 10;
+            // 
             // AddMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(863, 528);
+            this.ClientSize = new System.Drawing.Size(863, 604);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -365,6 +391,7 @@
             this.Load += new System.EventHandler(this.AddMember_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -391,5 +418,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtHeight;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtHealth;
         private FontAwesome.Sharp.IconButton iconButtonModifyMember;
+        private System.Windows.Forms.TextBox imageTextBox;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

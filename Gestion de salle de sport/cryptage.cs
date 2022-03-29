@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Security.Cryptography;
-using System.CodeDom.Compiler;
-using System.Data;
+using System.Text;
 
 namespace Gestion_de_salle_de_sport
 {

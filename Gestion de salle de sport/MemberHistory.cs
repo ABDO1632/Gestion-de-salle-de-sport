@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 namespace Gestion_de_salle_de_sport
 {
     public partial class MemberHistory : Form
@@ -38,10 +33,10 @@ namespace Gestion_de_salle_de_sport
                 weightTextBox.Text = dr["Weight"].ToString();
                 fatTextBox.Text = dr["Fat"].ToString();
             }
-            
+
             db.close(dr);
         }
 
-    
+
     }
 }
