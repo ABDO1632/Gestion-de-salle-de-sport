@@ -73,5 +73,10 @@ namespace Gestion_de_salle_de_sport
         {
             this.Close();
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            openChildForm(new payment());
+        }
     }
 }
