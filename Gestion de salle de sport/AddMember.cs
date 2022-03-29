@@ -51,12 +51,19 @@ namespace Gestion_de_salle_de_sport
                     pictureBox1.BackgroundImage = img;
 
                 }
+                db.close(dr);
                 
             }
             if (Member.roleFormMember == "Add")
             {
                 iconButtonModifyMember.Visible = false;
             }
+        }
+
+        private void iconButtonModifyMember_Click(object sender, EventArgs e)
+        {
+
+            db.Excute("update employe set nom_membre='" + txtFName.Text + "',prenom_membre='" + txtLName.Text + "',tel_membre='" + txtPhone.Text + "',email_membre='" + txtEmail.Text + "',date_naiss=" + DatepickerDateN.Value.ToString() + ",photo='" + txtFName.Text + "'+,Health_statue='" + txtHealth.Text + "'+,Height='" + txtHeight.Text + "'+,Weight='" + txtWeight.Text + "'+,fat='" + txtFat.Text + "'+,gendre='" + txtFName.Text + "where idmembre = " + Member.id+"");
         }
     }
 }

@@ -103,6 +103,7 @@
             this.iconButtonModifyMember.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonModifyMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonModifyMember.UseVisualStyleBackColor = false;
+            this.iconButtonModifyMember.Click += new System.EventHandler(this.iconButtonModifyMember_Click);
             // 
             // iconButtonAddNewMember
             // 
@@ -277,7 +278,7 @@
             this.DatepickerDateN.BorderRadius = 0;
             this.DatepickerDateN.Dock = System.Windows.Forms.DockStyle.Top;
             this.DatepickerDateN.ForeColor = System.Drawing.Color.Gray;
-            this.DatepickerDateN.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DatepickerDateN.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DatepickerDateN.FormatCustom = null;
             this.DatepickerDateN.Location = new System.Drawing.Point(0, 196);
             this.DatepickerDateN.Name = "DatepickerDateN";

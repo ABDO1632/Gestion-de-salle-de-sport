@@ -32,6 +32,13 @@ namespace Gestion_de_salle_de_sport
             cn.Close();
 
         }
+        public static void Excute(string req)
+        {
+            Ouvreconnexion();
+            com = new SqlCommand(req, cn);
+            com.ExecuteReader();
+            
+        }
         public static SqlDataReader remplir(string req)
         {
             Ouvreconnexion();
