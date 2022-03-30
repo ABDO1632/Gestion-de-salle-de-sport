@@ -127,6 +127,7 @@
             this.iconButtonAddNewMember.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAddNewMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAddNewMember.UseVisualStyleBackColor = false;
+            this.iconButtonAddNewMember.Click += new System.EventHandler(this.iconButtonAddNewMember_Click);
             // 
             // panel3
             // 
@@ -367,13 +368,15 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "male",
+            "female"});
             this.comboBox1.Location = new System.Drawing.Point(0, 441);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(448, 21);
+            this.comboBox1.Size = new System.Drawing.Size(448, 28);
             this.comboBox1.TabIndex = 10;
             // 
             // AddMember

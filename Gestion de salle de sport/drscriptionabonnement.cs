@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Gestion_de_salle_de_sport
+﻿namespace Gestion_de_salle_de_sport
 {
     class drscriptionabonnement
     {

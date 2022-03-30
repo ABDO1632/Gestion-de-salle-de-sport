@@ -33,6 +33,7 @@
             this.button_choosePhoto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButtonModifyEquipment = new FontAwesome.Sharp.IconButton();
             this.iconButtonAddEquipment = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtQte = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -40,7 +41,8 @@
             this.txtState = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMusclTarger = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.iconButtonModifyEquipment = new FontAwesome.Sharp.IconButton();
+            this.imageTextBox = new System.Windows.Forms.TextBox();
+            this.openFileDialog_Photo = new System.Windows.Forms.OpenFileDialog();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -49,6 +51,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.imageTextBox);
             this.panel5.Controls.Add(this.button_choosePhoto);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
@@ -97,6 +100,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(886, 78);
             this.panel1.TabIndex = 6;
+            // 
+            // iconButtonModifyEquipment
+            // 
+            this.iconButtonModifyEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonModifyEquipment.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButtonModifyEquipment.FlatAppearance.BorderSize = 0;
+            this.iconButtonModifyEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonModifyEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonModifyEquipment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonModifyEquipment.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
+            this.iconButtonModifyEquipment.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonModifyEquipment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonModifyEquipment.Location = new System.Drawing.Point(272, 0);
+            this.iconButtonModifyEquipment.Name = "iconButtonModifyEquipment";
+            this.iconButtonModifyEquipment.Size = new System.Drawing.Size(272, 78);
+            this.iconButtonModifyEquipment.TabIndex = 1;
+            this.iconButtonModifyEquipment.Text = "Modify Equipment";
+            this.iconButtonModifyEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonModifyEquipment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonModifyEquipment.UseVisualStyleBackColor = false;
+            this.iconButtonModifyEquipment.Click += new System.EventHandler(this.iconButtonModifyEquipment_Click);
             // 
             // iconButtonAddEquipment
             // 
@@ -232,26 +256,17 @@
             this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // iconButtonModifyEquipment
+            // imageTextBox
             // 
-            this.iconButtonModifyEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.iconButtonModifyEquipment.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButtonModifyEquipment.FlatAppearance.BorderSize = 0;
-            this.iconButtonModifyEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonModifyEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonModifyEquipment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButtonModifyEquipment.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
-            this.iconButtonModifyEquipment.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButtonModifyEquipment.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonModifyEquipment.Location = new System.Drawing.Point(272, 0);
-            this.iconButtonModifyEquipment.Name = "iconButtonModifyEquipment";
-            this.iconButtonModifyEquipment.Size = new System.Drawing.Size(272, 78);
-            this.iconButtonModifyEquipment.TabIndex = 1;
-            this.iconButtonModifyEquipment.Text = "Modify Equipment";
-            this.iconButtonModifyEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonModifyEquipment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonModifyEquipment.UseVisualStyleBackColor = false;
-            this.iconButtonModifyEquipment.Click += new System.EventHandler(this.iconButtonModifyEquipment_Click);
+            this.imageTextBox.Location = new System.Drawing.Point(6, 276);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.Size = new System.Drawing.Size(168, 20);
+            this.imageTextBox.TabIndex = 40;
+            this.imageTextBox.Visible = false;
+            // 
+            // openFileDialog_Photo
+            // 
+            this.openFileDialog_Photo.FileName = "openFileDialog1";
             // 
             // AddNewEquipment
             // 
@@ -266,6 +281,7 @@
             this.Text = "AddNewEquipment";
             this.Load += new System.EventHandler(this.AddNewEquipment_Load);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -287,5 +303,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtMusclTarger;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
         private FontAwesome.Sharp.IconButton iconButtonModifyEquipment;
+        private System.Windows.Forms.TextBox imageTextBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_Photo;
     }
 }

@@ -78,7 +78,7 @@
             idmembreLabel.AutoSize = true;
             idmembreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idmembreLabel.ForeColor = System.Drawing.Color.LightGray;
-            idmembreLabel.Location = new System.Drawing.Point(194, 12);
+            idmembreLabel.Location = new System.Drawing.Point(185, 12);
             idmembreLabel.Name = "idmembreLabel";
             idmembreLabel.Size = new System.Drawing.Size(83, 20);
             idmembreLabel.TabIndex = 25;
@@ -89,7 +89,7 @@
             nom_membreLabel.AutoSize = true;
             nom_membreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nom_membreLabel.ForeColor = System.Drawing.Color.LightGray;
-            nom_membreLabel.Location = new System.Drawing.Point(194, 38);
+            nom_membreLabel.Location = new System.Drawing.Point(185, 38);
             nom_membreLabel.Name = "nom_membreLabel";
             nom_membreLabel.Size = new System.Drawing.Size(106, 20);
             nom_membreLabel.TabIndex = 27;
@@ -100,7 +100,7 @@
             prenom_membreLabel.AutoSize = true;
             prenom_membreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             prenom_membreLabel.ForeColor = System.Drawing.Color.LightGray;
-            prenom_membreLabel.Location = new System.Drawing.Point(194, 64);
+            prenom_membreLabel.Location = new System.Drawing.Point(185, 64);
             prenom_membreLabel.Name = "prenom_membreLabel";
             prenom_membreLabel.Size = new System.Drawing.Size(129, 20);
             prenom_membreLabel.TabIndex = 29;
@@ -111,7 +111,7 @@
             tel_membreLabel.AutoSize = true;
             tel_membreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tel_membreLabel.ForeColor = System.Drawing.Color.LightGray;
-            tel_membreLabel.Location = new System.Drawing.Point(194, 90);
+            tel_membreLabel.Location = new System.Drawing.Point(185, 90);
             tel_membreLabel.Name = "tel_membreLabel";
             tel_membreLabel.Size = new System.Drawing.Size(92, 20);
             tel_membreLabel.TabIndex = 31;
@@ -122,7 +122,7 @@
             email_membreLabel.AutoSize = true;
             email_membreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             email_membreLabel.ForeColor = System.Drawing.Color.LightGray;
-            email_membreLabel.Location = new System.Drawing.Point(194, 116);
+            email_membreLabel.Location = new System.Drawing.Point(185, 116);
             email_membreLabel.Name = "email_membreLabel";
             email_membreLabel.Size = new System.Drawing.Size(112, 20);
             email_membreLabel.TabIndex = 33;
@@ -144,7 +144,7 @@
             health_statueLabel.AutoSize = true;
             health_statueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             health_statueLabel.ForeColor = System.Drawing.Color.LightGray;
-            health_statueLabel.Location = new System.Drawing.Point(536, 35);
+            health_statueLabel.Location = new System.Drawing.Point(524, 35);
             health_statueLabel.Name = "health_statueLabel";
             health_statueLabel.Size = new System.Drawing.Size(109, 20);
             health_statueLabel.TabIndex = 39;
@@ -275,7 +275,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(18, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 128);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -284,7 +284,7 @@
             this.idmembreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(18)))), ((int)(((byte)(45)))));
             this.idmembreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idmembreTextBox.ForeColor = System.Drawing.Color.Gainsboro;
-            this.idmembreTextBox.Location = new System.Drawing.Point(330, 15);
+            this.idmembreTextBox.Location = new System.Drawing.Point(321, 15);
             this.idmembreTextBox.Multiline = true;
             this.idmembreTextBox.Name = "idmembreTextBox";
             this.idmembreTextBox.Size = new System.Drawing.Size(200, 20);
@@ -295,7 +295,7 @@
             this.nom_membreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(18)))), ((int)(((byte)(45)))));
             this.nom_membreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nom_membreTextBox.ForeColor = System.Drawing.Color.Gainsboro;
-            this.nom_membreTextBox.Location = new System.Drawing.Point(330, 40);
+            this.nom_membreTextBox.Location = new System.Drawing.Point(321, 40);
             this.nom_membreTextBox.Multiline = true;
             this.nom_membreTextBox.Name = "nom_membreTextBox";
             this.nom_membreTextBox.Size = new System.Drawing.Size(200, 20);
@@ -306,7 +306,7 @@
             this.prenom_membreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(18)))), ((int)(((byte)(45)))));
             this.prenom_membreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.prenom_membreTextBox.ForeColor = System.Drawing.Color.Gainsboro;
-            this.prenom_membreTextBox.Location = new System.Drawing.Point(330, 66);
+            this.prenom_membreTextBox.Location = new System.Drawing.Point(321, 66);
             this.prenom_membreTextBox.Multiline = true;
             this.prenom_membreTextBox.Name = "prenom_membreTextBox";
             this.prenom_membreTextBox.Size = new System.Drawing.Size(200, 20);
@@ -317,7 +317,7 @@
             this.tel_membreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(18)))), ((int)(((byte)(45)))));
             this.tel_membreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tel_membreTextBox.ForeColor = System.Drawing.Color.Gainsboro;
-            this.tel_membreTextBox.Location = new System.Drawing.Point(330, 90);
+            this.tel_membreTextBox.Location = new System.Drawing.Point(321, 90);
             this.tel_membreTextBox.Multiline = true;
             this.tel_membreTextBox.Name = "tel_membreTextBox";
             this.tel_membreTextBox.Size = new System.Drawing.Size(200, 20);
@@ -328,7 +328,7 @@
             this.email_membreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(18)))), ((int)(((byte)(45)))));
             this.email_membreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.email_membreTextBox.ForeColor = System.Drawing.Color.Gainsboro;
-            this.email_membreTextBox.Location = new System.Drawing.Point(330, 118);
+            this.email_membreTextBox.Location = new System.Drawing.Point(321, 118);
             this.email_membreTextBox.Multiline = true;
             this.email_membreTextBox.Name = "email_membreTextBox";
             this.email_membreTextBox.Size = new System.Drawing.Size(200, 20);

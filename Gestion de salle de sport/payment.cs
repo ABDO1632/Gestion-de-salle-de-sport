@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 namespace Gestion_de_salle_de_sport
 {
     public partial class payment : Form
@@ -150,7 +146,7 @@ namespace Gestion_de_salle_de_sport
                 idabonnement.HintForeColor = Color.Black;
                 if (MessageBox.Show("do you really register this payment?", "message", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    
+
                     SqlCommand com1 = new SqlCommand("insert into abonnee values ( @idmembre, @idabonnement, @datedebut,@datefin )", cn);
 
                     com1.Parameters.AddWithValue("@idmembre", idmembre.Text);
@@ -160,7 +156,7 @@ namespace Gestion_de_salle_de_sport
                     com1.ExecuteNonQuery();
                     da.Update(ds.Tables["abonnee"]);
                     com1 = null;
-                    
+
                     btnvalidate.Visible = false;
                     btnadd.Enabled = true;
                     btncancel.Visible = true;
@@ -245,6 +241,6 @@ namespace Gestion_de_salle_de_sport
             }
         }
 
-     
+
     }
 }

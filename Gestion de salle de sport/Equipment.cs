@@ -24,9 +24,11 @@ namespace Gestion_de_salle_de_sport
 
             while (dr.Read())
             {
-                Bitmap img = new Bitmap(dr["photo"].ToString());
-                Bitmap img1 = new Bitmap("delete_trash.png");
-                Bitmap img2 = new Bitmap("modify.png");
+                
+                //MessageBox.Show(dr["photo"].ToString());
+                Bitmap img = new Bitmap("./photo/" + dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("photo/" + "delete_trash.png");
+                Bitmap img2 = new Bitmap("photo/" + "modify.png");
                 dataGridView1.Rows.Add(dr["id_equipement"].ToString(), img, dr["nom_equipement"].ToString(), dr["muscl_target"].ToString(), dr["etat"].ToString(), dr["prix"].ToString(), dr["quantity"].ToString(), img2, img1); ;
 
             }
@@ -92,7 +94,7 @@ namespace Gestion_de_salle_de_sport
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
                 e.RowIndex >= 0)
             {
-                
+
                 if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Modify"])
                 {
                     idEquipment = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -117,10 +119,10 @@ namespace Gestion_de_salle_de_sport
             }
             while (dr.Read())
             {
-                Bitmap img = new Bitmap(dr["photo"].ToString());
-                Bitmap img1 = new Bitmap("delete_trash.png");
-                Bitmap img2 = new Bitmap("modify.png");
-                Bitmap img3 = new Bitmap("documents.png");
+                Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("photo/" + "delete_trash.png");
+                Bitmap img2 = new Bitmap("photo/" + "modify.png");
+                Bitmap img3 = new Bitmap("photo/" + "documents.png");
                 dataGridView1.Rows.Add(dr["id_equipement"].ToString(), img, dr["nom_equipement"].ToString(), dr["muscl_target"].ToString(), dr["etat"].ToString(), dr["prix"].ToString(), dr["quantity"].ToString(), img2, img1); ;
             }
         }

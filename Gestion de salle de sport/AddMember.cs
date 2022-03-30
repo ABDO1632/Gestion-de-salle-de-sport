@@ -29,6 +29,7 @@ namespace Gestion_de_salle_de_sport
         {
             if (Member.roleFormMember == "Modify")
             {
+
                 dr = db.remplir("select * from membre where idmembre=" + Member.id);
                 iconButtonAddNewMember.Visible = false;
                 while (dr.Read())
@@ -42,12 +43,12 @@ namespace Gestion_de_salle_de_sport
                     txtWeight.Text = dr["Weight"].ToString();
                     DatepickerDateN.Value = DateTime.Parse(dr["date_naiss"].ToString());
                     txtFat.Text = dr["Fat"].ToString();
-                    Bitmap img = new Bitmap(dr["photo"].ToString());
+                    Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
                     pictureBox1.BackgroundImage = img;
                     imageTextBox.Text = dr["photo"].ToString();
+                    comboBox1.SelectedItem = dr["gendre"].ToString();
                 }
                 db.close(dr);
-
             }
             if (Member.roleFormMember == "Add")
             {
@@ -58,8 +59,23 @@ namespace Gestion_de_salle_de_sport
         private void iconButtonModifyMember_Click(object sender, EventArgs e)
         {
 
-            db.Excute("update employe set nom_membre='" + txtFName.Text + "',prenom_membre='" + txtLName.Text + "',tel_membre='" + txtPhone.Text + "',email_membre='" + txtEmail.Text + "',date_naiss='" + DatepickerDateN.Value.ToString() + "',photo='" + imageTextBox.Text + "'+,Health_statue='" + txtHealth.Text + "'+,Height='" + txtHeight.Text + "',Weight='" + txtWeight.Text + "',fat='" + txtFat.Text + "',gendre='" + comboBox1.SelectedItem.ToString() + "' where idmembre = '" + Equipment.idEquipment +"'");
-        
+
+            db.Excute("update membre set nom_membre='" + txtFName.Text + "',prenom_membre='" + txtLName.Text + "',tel_membre='" + txtPhone.Text + "',email_membre='" + txtEmail.Text + "',date_naiss='" + DatepickerDateN.Value.ToString() + "',photo='" + imageTextBox.Text + "',Health_statue='" + txtHealth.Text + "',Height='" + txtHeight.Text.Replace(",", ".") + "',Weight='" + txtWeight.Text.Replace(",", ".") + "',fat='" + txtFat.Text.Replace(",", ".") + "',gendre='" + comboBox1.SelectedItem.ToString() + "' where idmembre = '" + Member.id + "'");
+
+        }
+
+        private void iconButtonAddNewMember_Click(object sender, EventArgs e)
+        {
+            if (txtFName.Text == "" || txtLName.Text == "" || txtPhone.Text == "" || txtEmail.Text == "" || imageTextBox.Text == "" || txtHealth.Text == "" || txtHeight.Text == "" || txtWeight.Text == "" || txtFat.Text == "" || comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please Insert all the Informations !!!");
+            }
+            else
+            {
+                db.Excute("insert into membre values('" + txtFName.Text + "','" + txtLName.Text + "','" + txtPhone.Text + "','" + txtEmail.Text + "','" + DatepickerDateN.Value.ToString() + "','" + imageTextBox.Text + "','" + txtHealth.Text + "','" + txtHeight.Text.Replace(",", ".") + "','" + txtWeight.Text.Replace(",", ".") + "','" + txtFat.Text.Replace(",", ".") + "','" + comboBox1.SelectedItem.ToString() + "')");
+
+            }
+
         }
     }
 }

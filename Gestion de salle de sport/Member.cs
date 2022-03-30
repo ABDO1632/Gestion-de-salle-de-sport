@@ -17,10 +17,10 @@ namespace Gestion_de_salle_de_sport
             dr = db.remplir("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre");
             while (dr.Read())
             {
-                Bitmap img = new Bitmap(dr["photo"].ToString());
-                Bitmap img1 = new Bitmap("delete_trash.png");
-                Bitmap img2 = new Bitmap("modify.png");
-                Bitmap img3 = new Bitmap("documents.png");
+                Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("photo/" + "delete_trash.png");
+                Bitmap img2 = new Bitmap("photo/" + "modify.png");
+                Bitmap img3 = new Bitmap("photo/" + "documents.png");
                 dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1); ;
 
             }
@@ -77,7 +77,11 @@ namespace Gestion_de_salle_de_sport
                 if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"])
                 {
                     id = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    MessageBox.Show(" Delete!!!!");
+                    DialogResult re = MessageBox.Show("Are you sure you want to delete this Member !!", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult.Yes == re)
+                    {
+                        db.Excute("DELETE FROM membre WHERE idmembre = '" + id + "'");
+                    }
                 }
             }
 
@@ -154,18 +158,18 @@ namespace Gestion_de_salle_de_sport
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            dr = db.remplir("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre  where (nom_membre+' '+prenom_membre)like '%"+txtNameMember.Text+"%'");
+            dr = db.remplir("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre  where (nom_membre+' '+prenom_membre)like '%" + txtNameMember.Text + "%'");
             if (dataGridView1.Rows.Count >= 1)
             {
                 dataGridView1.Rows.Clear();
             }
             while (dr.Read())
             {
-                    Bitmap img = new Bitmap(dr["photo"].ToString());
-                    Bitmap img1 = new Bitmap("delete_trash.png");
-                    Bitmap img2 = new Bitmap("modify.png");
-                    Bitmap img3 = new Bitmap("documents.png");
-                    dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1);
+                Bitmap img = new Bitmap(dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("delete_trash.png");
+                Bitmap img2 = new Bitmap("modify.png");
+                Bitmap img3 = new Bitmap("documents.png");
+                dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1);
             }
         }
     }

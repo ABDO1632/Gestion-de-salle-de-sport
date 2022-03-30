@@ -12,7 +12,7 @@ namespace Gestion_de_salle_de_sport
         }
 
 
-
+        public static string idSalle = "1";
         public Form activeForm = null;
         public void openChildForm(Form childForm)
         {
@@ -66,7 +66,7 @@ namespace Gestion_de_salle_de_sport
 
         private void iconButton6_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmFood());
         }
 
         private void iconButton8_Click(object sender, EventArgs e)
