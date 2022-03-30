@@ -36,10 +36,16 @@ namespace Gestion_de_salle_de_sport
         {
             Form1.frm.openChildForm(new AddMember());
         }
+        public static void ClickedMemberHistory()
+        {
+            Form1.frm.openChildForm(new MemberHistory());
+        }
         public static void ClickedE()
         {
             Form1.frm.openChildForm(new AddNewEquipment());
         }
+
+
         public static void ShowNewForm(object sender, EventArgs e)
         {
 

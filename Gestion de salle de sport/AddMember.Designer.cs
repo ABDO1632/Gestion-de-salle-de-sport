@@ -35,9 +35,11 @@
             this.iconButtonAddNewMember = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.imageTextBox = new System.Windows.Forms.TextBox();
             this.button_choosePhoto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtFat = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtWeight = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtHeight = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -47,8 +49,6 @@
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtLName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.openFileDialog_Photo = new System.Windows.Forms.OpenFileDialog();
-            this.imageTextBox = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -148,6 +148,14 @@
             this.panel5.Size = new System.Drawing.Size(415, 496);
             this.panel5.TabIndex = 5;
             // 
+            // imageTextBox
+            // 
+            this.imageTextBox.Location = new System.Drawing.Point(0, 274);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.Size = new System.Drawing.Size(168, 20);
+            this.imageTextBox.TabIndex = 39;
+            this.imageTextBox.Visible = false;
+            // 
             // button_choosePhoto
             // 
             this.button_choosePhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
@@ -196,6 +204,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(448, 496);
             this.panel2.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "male",
+            "female"});
+            this.comboBox1.Location = new System.Drawing.Point(0, 441);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(448, 28);
+            this.comboBox1.TabIndex = 10;
             // 
             // txtFat
             // 
@@ -354,30 +378,6 @@
             // openFileDialog_Photo
             // 
             this.openFileDialog_Photo.FileName = "openFileDialog1";
-            // 
-            // imageTextBox
-            // 
-            this.imageTextBox.Location = new System.Drawing.Point(0, 274);
-            this.imageTextBox.Name = "imageTextBox";
-            this.imageTextBox.Size = new System.Drawing.Size(168, 20);
-            this.imageTextBox.TabIndex = 39;
-            this.imageTextBox.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "male",
-            "female"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 441);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(448, 28);
-            this.comboBox1.TabIndex = 10;
             // 
             // AddMember
             // 

@@ -253,5 +253,19 @@ namespace Gestion_de_salle_de_sport
         {
 
         }
+
+        private void iconButtonAddNewFood_Click(object sender, EventArgs e)
+        {
+            AddNewFood fd = new AddNewFood();
+            Member.roleFormMember = "Add";
+            fd.ShowDialog();
+        }
+
+        private void iconButtonModify_Click(object sender, EventArgs e)
+        {
+            AddNewFood fd = new AddNewFood();
+            Member.roleFormMember = "Modify";
+            fd.ShowDialog();
+        }
     }
 }

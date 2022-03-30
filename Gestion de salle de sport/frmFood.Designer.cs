@@ -39,9 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_buy = new FontAwesome.Sharp.IconButton();
             this.cb_member = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAdd = new System.Windows.Forms.Label();
@@ -60,20 +63,19 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.txt_idFood = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_archive = new FontAwesome.Sharp.IconButton();
-            this.btn_buy = new FontAwesome.Sharp.IconButton();
+            this.iconButtonAddNewFood = new FontAwesome.Sharp.IconButton();
+            this.iconButtonModify = new FontAwesome.Sharp.IconButton();
+            this.iconButtonDelete = new FontAwesome.Sharp.IconButton();
             this.paneChild.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnl_note.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_chicken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneChild
@@ -210,9 +212,34 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(570, 397);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(905, 39);
+            this.panel3.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Goudy Stout", 22.26804F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 41);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "MENU";
+            // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImage = global::Gestion_de_salle_de_sport.Properties.Resources.ads;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Location = new System.Drawing.Point(800, 39);
@@ -225,7 +252,7 @@
             // 
             // pictureBox26
             // 
-            this.pictureBox26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox26.BackgroundImage")));
+            this.pictureBox26.BackgroundImage = global::Gestion_de_salle_de_sport.Properties.Resources.image25;
             this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox26.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox26.Location = new System.Drawing.Point(230, 436);
@@ -240,7 +267,9 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.btn_archive);
+            this.bunifuGradientPanel1.Controls.Add(this.iconButtonDelete);
+            this.bunifuGradientPanel1.Controls.Add(this.iconButtonModify);
+            this.bunifuGradientPanel1.Controls.Add(this.iconButtonAddNewFood);
             this.bunifuGradientPanel1.Controls.Add(this.btn_buy);
             this.bunifuGradientPanel1.Controls.Add(this.cb_member);
             this.bunifuGradientPanel1.Controls.Add(this.panel2);
@@ -267,6 +296,31 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(230, 500);
             this.bunifuGradientPanel1.TabIndex = 28;
+            // 
+            // btn_buy
+            // 
+            this.btn_buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_buy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buy.FlatAppearance.BorderSize = 0;
+            this.btn_buy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.btn_buy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.btn_buy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buy.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buy.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_buy.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.btn_buy.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_buy.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_buy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buy.Location = new System.Drawing.Point(20, 297);
+            this.btn_buy.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buy.Name = "btn_buy";
+            this.btn_buy.Size = new System.Drawing.Size(198, 46);
+            this.btn_buy.TabIndex = 0;
+            this.btn_buy.Text = "Buy";
+            this.btn_buy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_buy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_buy.UseVisualStyleBackColor = false;
+            this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
             // 
             // cb_member
             // 
@@ -437,7 +491,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImage = global::Gestion_de_salle_de_sport.Properties.Resources.dinner;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(151, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -540,79 +594,80 @@
             this.txt_idFood.Size = new System.Drawing.Size(84, 17);
             this.txt_idFood.TabIndex = 0;
             // 
-            // panel3
+            // iconButtonAddNewFood
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(905, 39);
-            this.panel3.TabIndex = 37;
+            this.iconButtonAddNewFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.iconButtonAddNewFood.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButtonAddNewFood.FlatAppearance.BorderSize = 0;
+            this.iconButtonAddNewFood.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonAddNewFood.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonAddNewFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAddNewFood.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAddNewFood.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonAddNewFood.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButtonAddNewFood.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonAddNewFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAddNewFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonAddNewFood.Location = new System.Drawing.Point(20, 347);
+            this.iconButtonAddNewFood.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButtonAddNewFood.Name = "iconButtonAddNewFood";
+            this.iconButtonAddNewFood.Size = new System.Drawing.Size(198, 46);
+            this.iconButtonAddNewFood.TabIndex = 56;
+            this.iconButtonAddNewFood.Text = "Add New Food";
+            this.iconButtonAddNewFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonAddNewFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonAddNewFood.UseVisualStyleBackColor = false;
+            this.iconButtonAddNewFood.Click += new System.EventHandler(this.iconButtonAddNewFood_Click);
             // 
-            // label2
+            // iconButtonModify
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Goudy Stout", 22.26804F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 41);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "MENU";
+            this.iconButtonModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.iconButtonModify.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButtonModify.FlatAppearance.BorderSize = 0;
+            this.iconButtonModify.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonModify.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonModify.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonModify.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonModify.IconChar = FontAwesome.Sharp.IconChar.PenAlt;
+            this.iconButtonModify.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonModify.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonModify.Location = new System.Drawing.Point(20, 397);
+            this.iconButtonModify.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButtonModify.Name = "iconButtonModify";
+            this.iconButtonModify.Size = new System.Drawing.Size(198, 46);
+            this.iconButtonModify.TabIndex = 57;
+            this.iconButtonModify.Text = "Modify Food";
+            this.iconButtonModify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonModify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonModify.UseVisualStyleBackColor = false;
+            this.iconButtonModify.Click += new System.EventHandler(this.iconButtonModify_Click);
             // 
-            // btn_archive
+            // iconButtonDelete
             // 
-            this.btn_archive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_archive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_archive.FlatAppearance.BorderSize = 0;
-            this.btn_archive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btn_archive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btn_archive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_archive.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.10309F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_archive.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_archive.IconChar = FontAwesome.Sharp.IconChar.Archive;
-            this.btn_archive.IconColor = System.Drawing.Color.Gainsboro;
-            this.btn_archive.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_archive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_archive.Location = new System.Drawing.Point(20, 351);
-            this.btn_archive.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_archive.Name = "btn_archive";
-            this.btn_archive.Size = new System.Drawing.Size(180, 46);
-            this.btn_archive.TabIndex = 58;
-            this.btn_archive.Text = "Archives";
-            this.btn_archive.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_archive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_archive.UseVisualStyleBackColor = false;
-            // 
-            // btn_buy
-            // 
-            this.btn_buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_buy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_buy.FlatAppearance.BorderSize = 0;
-            this.btn_buy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btn_buy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btn_buy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buy.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.10309F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buy.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_buy.IconChar = FontAwesome.Sharp.IconChar.Shopify;
-            this.btn_buy.IconColor = System.Drawing.Color.Gainsboro;
-            this.btn_buy.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_buy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buy.Location = new System.Drawing.Point(20, 297);
-            this.btn_buy.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_buy.Name = "btn_buy";
-            this.btn_buy.Size = new System.Drawing.Size(180, 46);
-            this.btn_buy.TabIndex = 0;
-            this.btn_buy.Text = "Buy";
-            this.btn_buy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_buy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_buy.UseVisualStyleBackColor = false;
-            this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
+            this.iconButtonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.iconButtonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButtonDelete.FlatAppearance.BorderSize = 0;
+            this.iconButtonDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.iconButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonDelete.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonDelete.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.iconButtonDelete.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonDelete.Location = new System.Drawing.Point(20, 449);
+            this.iconButtonDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButtonDelete.Name = "iconButtonDelete";
+            this.iconButtonDelete.Size = new System.Drawing.Size(198, 46);
+            this.iconButtonDelete.TabIndex = 58;
+            this.iconButtonDelete.Text = "Delete Food";
+            this.iconButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonDelete.UseVisualStyleBackColor = false;
+            this.iconButtonDelete.Visible = false;
             // 
             // frmFood
             // 
@@ -630,6 +685,8 @@
             this.panel4.ResumeLayout(false);
             this.pnl_note.ResumeLayout(false);
             this.pnl_note.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -638,8 +695,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_chicken)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -679,7 +734,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private FontAwesome.Sharp.IconButton btn_archive;
         private FontAwesome.Sharp.IconButton btn_buy;
+        private FontAwesome.Sharp.IconButton iconButtonDelete;
+        private FontAwesome.Sharp.IconButton iconButtonModify;
+        private FontAwesome.Sharp.IconButton iconButtonAddNewFood;
     }
 }

@@ -18,7 +18,7 @@ namespace Gestion_de_salle_de_sport
 
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            string sql = "select * from utilisateur where username = '" + txtlogin.Text + "'";
+            string sql = "select * from utilisateur where login = '" + txtlogin.Text + "'";
             SqlCommand com = new SqlCommand(sql, cn);
             SqlDataReader dr = com.ExecuteReader();
             bool passport = false;
@@ -48,7 +48,7 @@ namespace Gestion_de_salle_de_sport
                 Form1 f1 = new Form1();
 
                 f1.ShowDialog();
-
+                this.Hide();
 
             }
             else

@@ -68,6 +68,8 @@ namespace Gestion_de_salle_de_sport
                 name = name + rnd.Next() + extention;
                 File.Copy(openFileDialog_Photo.FileName, "photo/" + name);
                 imageTextBox.Text = name;
+                Bitmap img = new Bitmap("photo/" + name);
+                pictureBox1.BackgroundImage = img;
             }
         }
     }

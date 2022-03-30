@@ -11,9 +11,13 @@ namespace Gestion_de_salle_de_sport
             InitializeComponent();
         }
         SqlDataReader dr;
-
-        private void Member_Load(object sender, EventArgs e)
+        public void remplirMembers()
         {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dataGridView1.Rows.Clear();
+
+            }
             dr = db.remplir("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre");
             while (dr.Read())
             {
@@ -24,6 +28,11 @@ namespace Gestion_de_salle_de_sport
                 dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1); ;
 
             }
+            db.close(dr);
+        }
+        private void Member_Load(object sender, EventArgs e)
+        {
+            remplirMembers();
         }
         public void AddButton()
         {
@@ -64,15 +73,15 @@ namespace Gestion_de_salle_de_sport
                 if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["CheckHistory"])
                 {
                     id = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    MemberHistory mb = new MemberHistory();
-                    mb.ShowDialog();
+                    Form1.ClickedMemberHistory();
+                    return;
                 }
                 if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Modify"])
                 {
                     id = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
                     roleFormMember = "Modify";
-                    AddMember ad = new AddMember();
-                    ad.ShowDialog();
+                    Form1.ClickedM();
+                    return;
                 }
                 if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"])
                 {
@@ -80,7 +89,16 @@ namespace Gestion_de_salle_de_sport
                     DialogResult re = MessageBox.Show("Are you sure you want to delete this Member !!", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (DialogResult.Yes == re)
                     {
+                        //demande_product
+                        db.Excute("DELETE FROM demande_product WHERE idmembre = '" + id + "'");
+                        db.Excute("DELETE FROM abonnee WHERE idmembre = '" + id + "'");
+                        db.Excute("DELETE FROM demande WHERE idmembre = '" + id + "'");
                         db.Excute("DELETE FROM membre WHERE idmembre = '" + id + "'");
+                        MessageBox.Show(" Deleted!!!!");
+                        remplirMembers();
+                        return;
+
+
                     }
                 }
             }

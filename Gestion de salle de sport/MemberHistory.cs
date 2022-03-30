@@ -14,7 +14,7 @@ namespace Gestion_de_salle_de_sport
         SqlCommand com = new SqlCommand();
         private void MemberHistory_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(db.ExcuteScalare("select COUNT(*) from abonnee where idmembre=1"));
+            //MessageBox.Show(db.ExcuteScalare("select COUNT(*) from abonnee where idmembre=1"));
             int nb = int.Parse(db.ExcuteScalare("select COUNT(*) from abonnee where idmembre='" + Member.id + "'"));
             if (nb == 0)
             {

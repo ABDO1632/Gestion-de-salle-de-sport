@@ -94,6 +94,12 @@
     <Compile Include="AddNewEquipment.Designer.cs">
       <DependentUpon>AddNewEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewFood.Designer.cs">
+      <DependentUpon>AddNewFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="cryptage.cs" />
     <Compile Include="db.cs" />
     <Compile Include="drscriptionabonnement.cs" />
@@ -153,6 +159,9 @@
     <EmbeddedResource Include="AddNewEquipment.resx">
       <DependentUpon>AddNewEquipment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddNewFood.resx">
+      <DependentUpon>AddNewFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
@@ -204,6 +214,30 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\photo\dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\photo\ads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\photo\image25.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoGrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

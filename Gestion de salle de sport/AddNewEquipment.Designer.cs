@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewEquipment));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.imageTextBox = new System.Windows.Forms.TextBox();
             this.button_choosePhoto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,7 +41,6 @@
             this.txtState = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMusclTarger = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.imageTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog_Photo = new System.Windows.Forms.OpenFileDialog();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +58,14 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(415, 445);
             this.panel5.TabIndex = 7;
+            // 
+            // imageTextBox
+            // 
+            this.imageTextBox.Location = new System.Drawing.Point(6, 276);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.Size = new System.Drawing.Size(168, 20);
+            this.imageTextBox.TabIndex = 40;
+            this.imageTextBox.Visible = false;
             // 
             // button_choosePhoto
             // 
@@ -81,7 +88,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImage = global::Gestion_de_salle_de_sport.Properties.Resources.dumbbell_64px;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -255,14 +262,6 @@
             this.txtName.Size = new System.Drawing.Size(471, 49);
             this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // imageTextBox
-            // 
-            this.imageTextBox.Location = new System.Drawing.Point(6, 276);
-            this.imageTextBox.Name = "imageTextBox";
-            this.imageTextBox.Size = new System.Drawing.Size(168, 20);
-            this.imageTextBox.TabIndex = 40;
-            this.imageTextBox.Visible = false;
             // 
             // openFileDialog_Photo
             // 

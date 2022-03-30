@@ -17,9 +17,13 @@ namespace Gestion_de_salle_de_sport
             Member.roleFormMember = "Add";
             Form1.ClickedE();
         }
-
-        private void Equipment_Load(object sender, EventArgs e)
+        public void RemplirEquipment()
         {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dataGridView1.Rows.Clear();
+
+            }
             dr = db.remplir("select id_equipement,photo, nom_equipement, muscl_target, etat, prix,quantity from equipement");
 
             while (dr.Read())
@@ -32,8 +36,12 @@ namespace Gestion_de_salle_de_sport
                 dataGridView1.Rows.Add(dr["id_equipement"].ToString(), img, dr["nom_equipement"].ToString(), dr["muscl_target"].ToString(), dr["etat"].ToString(), dr["prix"].ToString(), dr["quantity"].ToString(), img2, img1); ;
 
             }
+            db.close(dr);
         }
-
+        private void Equipment_Load(object sender, EventArgs e)
+        {
+            RemplirEquipment();
+        }
         private void dataGridView1_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -99,17 +107,32 @@ namespace Gestion_de_salle_de_sport
                 {
                     idEquipment = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
                     Member.roleFormMember = "Modify";
-                    AddNewEquipment ad = new AddNewEquipment();
-                    ad.ShowDialog();
+                    Form1.ClickedE();
+                    return;
                 }
                 if (senderGrid.Columns[e.ColumnIndex] == dataGridView1.Columns["Delete"])
                 {
                     idEquipment = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    MessageBox.Show(" Delete!!!!");
+                    DialogResult re = MessageBox.Show("Are you sure you want to delete this Equipement !!", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (DialogResult.Yes == re)
+                    {
+
+                        db.Excute("DELETE FROM equipement WHERE id_equipement = '" + idEquipment + "'");
+                        MessageBox.Show(" Deleted!!!!");
+                        RemplirEquipment();
+                        return;
+
+
+                    }
+
                 }
             }
         }
-
+        public void ReLoad()
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             dr = db.remplir("select id_equipement,photo, nom_equipement, muscl_target, etat, prix,quantity from equipement where nom_equipement like '%" + txtNameEquipment.Text + "%'");
