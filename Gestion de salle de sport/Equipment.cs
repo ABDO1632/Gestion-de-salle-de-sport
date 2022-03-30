@@ -24,7 +24,7 @@ namespace Gestion_de_salle_de_sport
 
             while (dr.Read())
             {
-                
+
                 //MessageBox.Show(dr["photo"].ToString());
                 Bitmap img = new Bitmap("./photo/" + dr["photo"].ToString());
                 Bitmap img1 = new Bitmap("photo/" + "delete_trash.png");

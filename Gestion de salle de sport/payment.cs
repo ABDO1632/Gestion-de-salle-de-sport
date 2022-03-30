@@ -27,7 +27,7 @@ namespace Gestion_de_salle_de_sport
             string cs = ConfigurationManager.ConnectionStrings["Gestion_de_salle_de_sport"].ConnectionString.ToString();
             cn.ConnectionString = cs;
             cn.Open();
-            com = new SqlCommand("select a.idmembre,a.id_abonnement,nom_membre,prenom_membre,a.date_debut,a.date_fin,t.tarif_abonnement ,t.libelle_abonnement,t.description  from membre m inner join abonnee a on m.idmembre = a.idmembre inner join type_abonnement t on t.id_abonnement = a.id_abonnement order by nom_membre ", cn);
+            com = new SqlCommand("select a.idmembre,a.id_abonnement,nom_membre,prenom_membre,a.date_debut,a.date_fin,t.tarif_abonnement ,t.libelle_abonnement  from membre m inner join abonnee a on m.idmembre = a.idmembre inner join type_abonnement t on t.id_abonnement = a.id_abonnement order by nom_membre ", cn);
             da = new SqlDataAdapter(com);
             cb = new SqlCommandBuilder(da);
             da.Fill(ds, "abonnee");

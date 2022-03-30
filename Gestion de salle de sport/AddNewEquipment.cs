@@ -41,13 +41,13 @@ namespace Gestion_de_salle_de_sport
 
         private void iconButtonModifyEquipment_Click(object sender, EventArgs e)
         {
-            db.Excute("update equipement set nom_equipement='" + txtName.Text + "',muscl_target='" + txtMusclTarger.Text + "',etat='" + txtState.Text + "',prix='" + txtPrice.Text + "',quantity='" + txtQte.Text + "',photo='" + imageTextBox.Text  + "' where id_equipement = '" + Equipment.idEquipment + "'");
+            db.Excute("update equipement set nom_equipement='" + txtName.Text + "',muscl_target='" + txtMusclTarger.Text + "',etat='" + txtState.Text + "',prix='" + txtPrice.Text + "',quantity='" + txtQte.Text + "',photo='" + imageTextBox.Text + "' where id_equipement = '" + Equipment.idEquipment + "'");
 
         }
 
         private void iconButtonAddEquipment_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "" || txtMusclTarger.Text == "" || txtState.Text == "" ||  imageTextBox.Text == "" || txtPrice.Text == "" || txtQte.Text == "" )
+            if (txtName.Text == "" || txtMusclTarger.Text == "" || txtState.Text == "" || imageTextBox.Text == "" || txtPrice.Text == "" || txtQte.Text == "")
             {
                 MessageBox.Show("Please Insert all the Informations !!!");
             }

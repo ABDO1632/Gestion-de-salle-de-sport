@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.IO;
-using System.Configuration;
 using System.Reflection;
 using System.Windows.Forms;
-
 namespace Gestion_de_salle_de_sport
 {
     public partial class frmFood : Form
@@ -21,7 +15,7 @@ namespace Gestion_de_salle_de_sport
         }
         public static void CloneControl(Control SourceControl, Control DestinationControl)
         {
-            String[] PropertiesToClone = new String[] { "Size", "Font", "Text", "Tag", "BackColor", "ForeColor", "BorderStyle", "TextAlign", "Width", "Margin" };
+            String[] PropertiesToClone = new String[] { "Size", "Font", "Text", "Tag", "Dock", "BackColor", "ForeColor", "BorderStyle", "TextAlign", "Width", "Margin" };
             PropertyInfo[] controlProperties = SourceControl.GetType().GetProperties();
 
             foreach (String Property in PropertiesToClone)
@@ -85,17 +79,18 @@ namespace Gestion_de_salle_de_sport
                 {
                     c2 = new Label();
 
-                    //copyControl(c, c2);
-
                     c2.Location = c.Location;
                     c2.Size = c.Size;
                     c2.Text = c.Text;
-                    c2.Dock = c.Dock;
+
                     if (c.Text == "Add")
                     {
                         c2.Click += lblAdd_Click;
+                        c2.Cursor = Cursors.Hand;
                     }
                     CloneControl(c, c2);
+                    c2.Dock = c.Dock;
+
                     pnl.Controls.Add(c2);
                 }
 
@@ -120,39 +115,51 @@ namespace Gestion_de_salle_de_sport
         {
             txt_qte.Enabled = test;
             cb_member.Enabled = test;
-            btn_buy.Enabled = test;
-            btn_cancel.Enabled = test;
 
-            btn_newFood.Enabled = !test;
-            btn_archive.Enabled = !test;
         }
         SqlDataReader dr;
         private void frmFood_Load(object sender, EventArgs e)
         {
-            db.Ouvreconnexion();
-            txt_idFood.Visible = false;
             dr = db.remplir("select * from membre");
-
+            DataTable t = new DataTable();
+            DataColumn idmembre = new DataColumn("idmembre", typeof(int));
+            DataColumn nom_Memb = new DataColumn("nom_membre", typeof(string));
+            t.Columns.Add(idmembre);
+            t.Columns.Add(nom_Memb);
             while (dr.Read())
             {
-                cb_member.Items.Add(dr["nom_membre"].ToString());
-                cb_member.DisplayMember = dr[1].ToString();
-                cb_member.ValueMember = dr[0].ToString();
-
+                DataRow r = t.NewRow();
+                r[0] = dr["idmembre"];
+                r[1] = dr["nom_membre"];
+                t.Rows.Add(r);
             }
+            cb_member.DisplayMember = "nom_membre";
+            cb_member.ValueMember = "idmembre";
+            cb_member.DataSource = t;
+            ///
             db.close(dr);
             pnl_note.Visible = true;
 
 
             panel2.Visible = false;
             //txt_idFood.Text = "1";
-
         }
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
-            Label lbl = (Label)sender;
-            txt_idFood.Text = lbl.Tag.ToString();
+            if ((Double.Parse(txt_qte.Text) <= 1))
+            {
+                MessageBox.Show("Please Enter Quanity ");
+            }
+            else
+            {
+                Label lbl = (Label)sender;
+                txt_idFood.Text = lbl.Tag.ToString();
+                string prixFood = db.ExcuteScalare("select prix from food where id_food='" + txt_idFood.Text + "'");
+                Double d = (Double.Parse(prixFood)) * Double.Parse(txt_qte.Text);
+                txt_price.Text = d.ToString();
+            }
+
         }
 
         private void pic_chicken_Click(object sender, EventArgs e)
@@ -166,14 +173,14 @@ namespace Gestion_de_salle_de_sport
             pnl_note.Visible = false;
             tableLayoutPanel1.Controls.Clear();
             label2.Text = "food";
-            db.Ouvreconnexion();
+
             dr = db.remplir("select * from food where categorie like 'food'");
 
 
             while (dr.Read())
             {
-                MessageBox.Show(dr["photo"].ToString());
-                Bitmap img = new Bitmap("photo" + dr["photo"].ToString());
+                //MessageBox.Show(dr["photo"].ToString());
+                Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
 
                 pic_chicken.BackgroundImage = img;
                 labelPrice.Text = dr["prix"].ToString();
@@ -187,6 +194,64 @@ namespace Gestion_de_salle_de_sport
 
             }
             db.close(dr);
+        }
+
+        private void btn_buy_Click(object sender, EventArgs e)
+        {
+            DialogResult re = MessageBox.Show("Confirm !", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == re)
+            {
+                if (cb_member.SelectedIndex == -1 || int.Parse(txt_qte.Text) <= 0 || txt_idFood.Text == "")
+                {
+
+                }
+                else
+                {
+                    db.Excute("insert into demande(idmembre,id_food,date_demande,quantite) values('" + cb_member.SelectedValue.ToString() + "','" + txt_idFood.Text + "',GetDate()," + txt_qte.Text + ")");
+                }
+            }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            pnl_note.Visible = false;
+            tableLayoutPanel1.Controls.Clear();
+            label2.Text = "Drinks";
+            db.Ouvreconnexion();
+
+            dr = db.remplir("select * from food where categorie like 'drink'");
+
+
+            while (dr.Read())
+            {
+
+                Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
+
+                pic_chicken.BackgroundImage = img;
+                labelPrice.Text = dr["prix"].ToString();
+                labelTitle.Text = dr["name_food"].ToString();
+                lblAdd.Tag = dr["id_food"].ToString();
+
+
+                Panel pn = new Panel();
+                pn = duplicatePanel(panel2);
+                tableLayoutPanel1.Controls.Add(pn);
+
+
+            }
+            db.close(dr);
+        }
+
+        private void txt_qte_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
