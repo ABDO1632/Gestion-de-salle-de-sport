@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewFood));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxFoods = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -43,8 +45,6 @@
             this.iconButtonAddfood = new FontAwesome.Sharp.IconButton();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.openFileDialog_Photo = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxFoods = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +63,31 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(385, 372);
             this.panel2.TabIndex = 11;
+            // 
+            // comboBoxFoods
+            // 
+            this.comboBoxFoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.comboBoxFoods.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBoxFoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxFoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFoods.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxFoods.FormattingEnabled = true;
+            this.comboBoxFoods.Location = new System.Drawing.Point(0, 144);
+            this.comboBoxFoods.Name = "comboBoxFoods";
+            this.comboBoxFoods.Size = new System.Drawing.Size(385, 28);
+            this.comboBoxFoods.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Choose food :";
             // 
             // comboBox1
             // 
@@ -224,10 +249,10 @@
             // 
             // dataGridViewImageColumn1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewImageColumn1.FillWeight = 6.516638F;
             this.dataGridViewImageColumn1.HeaderText = "photo";
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
@@ -241,31 +266,6 @@
             // openFileDialog_Photo
             // 
             this.openFileDialog_Photo.FileName = "openFileDialog1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(0, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 18);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Choose food :";
-            // 
-            // comboBoxFoods
-            // 
-            this.comboBoxFoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.comboBoxFoods.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBoxFoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxFoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFoods.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxFoods.FormattingEnabled = true;
-            this.comboBoxFoods.Location = new System.Drawing.Point(0, 144);
-            this.comboBoxFoods.Name = "comboBoxFoods";
-            this.comboBoxFoods.Size = new System.Drawing.Size(385, 28);
-            this.comboBoxFoods.TabIndex = 14;
             // 
             // AddNewFood
             // 

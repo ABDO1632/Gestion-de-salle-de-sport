@@ -66,10 +66,10 @@ namespace Gestion_de_salle_de_sport
                 ///
                 db.close(dr);
             }
-            if(Member.roleFormMember == "Add")
+            if (Member.roleFormMember == "Add")
             {
                 iconButtonModifyFood.Visible = false;
-                comboBoxFoods.Visible = false; 
+                comboBoxFoods.Visible = false;
                 label1.Visible = false;
             }
         }
@@ -78,7 +78,7 @@ namespace Gestion_de_salle_de_sport
         {
 
 
-            db.Excute("update food set name_food='" + txtName.Text + "',prix='" + txtPrice.Text + "',photo='" + imageTextBox.Text + "',categorie='" + comboBox1.SelectedItem.ToString()  + "' where id_food = '" + comboBoxFoods.SelectedItem.ToString() + "'");
+            db.Excute("update food set name_food='" + txtName.Text + "',prix='" + txtPrice.Text + "',photo='" + imageTextBox.Text + "',categorie='" + comboBox1.SelectedItem.ToString() + "' where id_food = '" + comboBoxFoods.SelectedItem.ToString() + "'");
 
         }
     }

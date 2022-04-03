@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtdesc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -39,12 +39,9 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.numbre = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.idabonnement = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btncancel = new FontAwesome.Sharp.IconButton();
             this.idmembre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnadd = new FontAwesome.Sharp.IconButton();
             this.txtdatefin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtdatedebut = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnvalidate = new FontAwesome.Sharp.IconButton();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -55,6 +52,9 @@
             this.txtabonnemnt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtprenom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtnom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btncancel = new FontAwesome.Sharp.IconButton();
+            this.btnadd = new FontAwesome.Sharp.IconButton();
+            this.btnvalidate = new FontAwesome.Sharp.IconButton();
             this.txtchercher = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dt1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuFlatButton1 = new FontAwesome.Sharp.IconButton();
@@ -191,26 +191,6 @@
             this.idabonnement.TabIndex = 13;
             this.idabonnement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btncancel
-            // 
-            this.btncancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncancel.FlatAppearance.BorderSize = 0;
-            this.btncancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancel.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btncancel.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.btncancel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.btncancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btncancel.IconSize = 40;
-            this.btncancel.Location = new System.Drawing.Point(134, 6);
-            this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(47, 41);
-            this.btncancel.TabIndex = 31;
-            this.btncancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btncancel.UseVisualStyleBackColor = true;
-            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
-            // 
             // idmembre
             // 
             this.idmembre.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -230,26 +210,6 @@
             this.idmembre.TabIndex = 12;
             this.idmembre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnadd
-            // 
-            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnadd.FlatAppearance.BorderSize = 0;
-            this.btnadd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnadd.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnadd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.btnadd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnadd.IconSize = 40;
-            this.btnadd.Location = new System.Drawing.Point(20, 6);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(47, 41);
-            this.btnadd.TabIndex = 28;
-            this.btnadd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
             // txtdatefin
             // 
             this.txtdatefin.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -266,7 +226,7 @@
             this.txtdatefin.Location = new System.Drawing.Point(143, 161);
             this.txtdatefin.Margin = new System.Windows.Forms.Padding(4);
             this.txtdatefin.Name = "txtdatefin";
-            this.txtdatefin.Size = new System.Drawing.Size(249, 28);
+            this.txtdatefin.Size = new System.Drawing.Size(179, 28);
             this.txtdatefin.TabIndex = 11;
             this.txtdatefin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -286,29 +246,9 @@
             this.txtdatedebut.Location = new System.Drawing.Point(143, 116);
             this.txtdatedebut.Margin = new System.Windows.Forms.Padding(4);
             this.txtdatedebut.Name = "txtdatedebut";
-            this.txtdatedebut.Size = new System.Drawing.Size(249, 28);
+            this.txtdatedebut.Size = new System.Drawing.Size(179, 28);
             this.txtdatedebut.TabIndex = 10;
             this.txtdatedebut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnvalidate
-            // 
-            this.btnvalidate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnvalidate.FlatAppearance.BorderSize = 0;
-            this.btnvalidate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
-            this.btnvalidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnvalidate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvalidate.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnvalidate.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.btnvalidate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
-            this.btnvalidate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnvalidate.IconSize = 40;
-            this.btnvalidate.Location = new System.Drawing.Point(81, 6);
-            this.btnvalidate.Name = "btnvalidate";
-            this.btnvalidate.Size = new System.Drawing.Size(47, 41);
-            this.btnvalidate.TabIndex = 29;
-            this.btnvalidate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnvalidate.UseVisualStyleBackColor = true;
-            this.btnvalidate.Click += new System.EventHandler(this.btnvalidate_Click);
             // 
             // bunifuCustomLabel5
             // 
@@ -378,7 +318,7 @@
             this.datefin.ForeColor = System.Drawing.Color.Black;
             this.datefin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datefin.FormatCustom = null;
-            this.datefin.Location = new System.Drawing.Point(399, 167);
+            this.datefin.Location = new System.Drawing.Point(332, 162);
             this.datefin.Name = "datefin";
             this.datefin.Size = new System.Drawing.Size(60, 30);
             this.datefin.TabIndex = 3;
@@ -393,7 +333,7 @@
             this.datedebbut.ForeColor = System.Drawing.Color.Black;
             this.datedebbut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datedebbut.FormatCustom = null;
-            this.datedebbut.Location = new System.Drawing.Point(399, 122);
+            this.datedebbut.Location = new System.Drawing.Point(332, 122);
             this.datedebbut.Name = "datedebbut";
             this.datedebbut.Size = new System.Drawing.Size(60, 29);
             this.datedebbut.TabIndex = 2;
@@ -457,6 +397,66 @@
             this.txtnom.TabIndex = 0;
             this.txtnom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // btncancel
+            // 
+            this.btncancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncancel.FlatAppearance.BorderSize = 0;
+            this.btncancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btncancel.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.btncancel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.btncancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btncancel.IconSize = 40;
+            this.btncancel.Location = new System.Drawing.Point(134, 6);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(47, 41);
+            this.btncancel.TabIndex = 31;
+            this.btncancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadd.FlatAppearance.BorderSize = 0;
+            this.btnadd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnadd.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnadd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.btnadd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnadd.IconSize = 40;
+            this.btnadd.Location = new System.Drawing.Point(20, 6);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(47, 41);
+            this.btnadd.TabIndex = 28;
+            this.btnadd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // btnvalidate
+            // 
+            this.btnvalidate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnvalidate.FlatAppearance.BorderSize = 0;
+            this.btnvalidate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(37)))), ((int)(((byte)(74)))));
+            this.btnvalidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvalidate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvalidate.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnvalidate.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnvalidate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(84)))), ((int)(((byte)(169)))));
+            this.btnvalidate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnvalidate.IconSize = 40;
+            this.btnvalidate.Location = new System.Drawing.Point(81, 6);
+            this.btnvalidate.Name = "btnvalidate";
+            this.btnvalidate.Size = new System.Drawing.Size(47, 41);
+            this.btnvalidate.TabIndex = 29;
+            this.btnvalidate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnvalidate.UseVisualStyleBackColor = true;
+            this.btnvalidate.Click += new System.EventHandler(this.btnvalidate_Click);
+            // 
             // txtchercher
             // 
             this.txtchercher.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -480,28 +480,28 @@
             // 
             this.dt1.AllowUserToAddRows = false;
             this.dt1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dt1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dt1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dt1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.dt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dt1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dt1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dt1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dt1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightPink;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dt1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightPink;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dt1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dt1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dt1.DoubleBuffered = true;
             this.dt1.EnableHeadersVisualStyles = false;

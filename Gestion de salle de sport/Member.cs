@@ -11,28 +11,45 @@ namespace Gestion_de_salle_de_sport
             InitializeComponent();
         }
         SqlDataReader dr;
-        public void remplirMembers()
+        public void remplirMembers(string req)
         {
             if (dataGridView1.Rows.Count > 0)
             {
                 dataGridView1.Rows.Clear();
 
             }
-            dr = db.remplir("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre");
+            dr = db.remplir(req);
             while (dr.Read())
             {
                 Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
                 Bitmap img1 = new Bitmap("photo/" + "delete_trash.png");
                 Bitmap img2 = new Bitmap("photo/" + "modify.png");
                 Bitmap img3 = new Bitmap("photo/" + "documents.png");
-                dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1); ;
+                Bitmap img4 = new Bitmap("photo/" + "ok.png");
+                Bitmap img5 = new Bitmap("photo/" + "cancel.png");
+                if (radioButtonNone.Checked)
+                {
+                    dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1, img5); ;
+                }
+                if (radioButtonNotPaid.Checked)
+                {
+                    dataGridView1.Columns["StateP"].Visible = true;
+                    dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1, img5); ;
 
+                }
+                if (radioButtonPaid.Checked)
+                {
+                    dataGridView1.Columns["StateP"].Visible = true;
+                    dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1, img4); ;
+
+                }
             }
             db.close(dr);
         }
         private void Member_Load(object sender, EventArgs e)
         {
-            remplirMembers();
+            radioButtonNone.Checked = true;
+            remplirMembers("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre");
         }
         public void AddButton()
         {
@@ -95,7 +112,7 @@ namespace Gestion_de_salle_de_sport
                         db.Excute("DELETE FROM demande WHERE idmembre = '" + id + "'");
                         db.Excute("DELETE FROM membre WHERE idmembre = '" + id + "'");
                         MessageBox.Show(" Deleted!!!!");
-                        remplirMembers();
+                        remplirMembers("select idmembre, nom_membre, prenom_membre, tel_membre, email_membre, photo from membre");
                         return;
 
 
@@ -183,11 +200,31 @@ namespace Gestion_de_salle_de_sport
             }
             while (dr.Read())
             {
-                Bitmap img = new Bitmap(dr["photo"].ToString());
-                Bitmap img1 = new Bitmap("delete_trash.png");
-                Bitmap img2 = new Bitmap("modify.png");
-                Bitmap img3 = new Bitmap("documents.png");
+                Bitmap img = new Bitmap("photo/" + dr["photo"].ToString());
+                Bitmap img1 = new Bitmap("photo/" + "delete_trash.png");
+                Bitmap img2 = new Bitmap("photo/" + "modify.png");
+                Bitmap img3 = new Bitmap("photo/" + "documents.png");
                 dataGridView1.Rows.Add(dr["idmembre"].ToString(), img, dr["nom_membre"].ToString(), dr["prenom_membre"].ToString(), dr["tel_membre"].ToString(), dr["email_membre"].ToString(), img3, img2, img1);
+            }
+        }
+
+        private void radioButtonNotPaid_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rd = (RadioButton)sender;
+            if (rd.Name == "radioButtonPaid" && rd.Checked)
+            {
+                //MessageBox.Show(rd.Name.ToString());
+                remplirMembers("select * from membre m inner join abonnee a on a.idmembre=m.idmembre where a.date_fin>GETDATE()");
+            }
+            if (rd.Name == "radioButtonNotPaid" && rd.Checked)
+            {
+                remplirMembers("select * from membre m inner join abonnee a on a.idmembre=m.idmembre where a.date_fin<GETDATE()");
+
+            }
+            if (rd.Name == "radioButtonNone" && rd.Checked)
+            {
+                dataGridView1.Columns["StateP"].Visible = false;
+
             }
         }
     }

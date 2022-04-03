@@ -34,6 +34,13 @@ namespace Gestion_de_salle_de_sport
                     heightTextBox.Text = dr["Height"].ToString();
                     weightTextBox.Text = dr["Weight"].ToString();
                     fatTextBox.Text = dr["Fat"].ToString();
+
+                    QRCoder.QRCodeGenerator QG = new QRCoder.QRCodeGenerator();
+                    var myData = QG.CreateQrCode(Member.id.ToString(), QRCoder.QRCodeGenerator.ECCLevel.H);
+                    var code = new QRCoder.QRCode(myData);
+                    pictureBox2.BackgroundImage = code.GetGraphic(50);
+
+
                 }
 
                 db.close(dr);
@@ -58,6 +65,11 @@ namespace Gestion_de_salle_de_sport
                     heightTextBox.Text = dr["Height"].ToString();
                     weightTextBox.Text = dr["Weight"].ToString();
                     fatTextBox.Text = dr["Fat"].ToString();
+
+                    QRCoder.QRCodeGenerator QG = new QRCoder.QRCodeGenerator();
+                    var myData = QG.CreateQrCode(Member.id.ToString(), QRCoder.QRCodeGenerator.ECCLevel.H);
+                    var code = new QRCoder.QRCode(myData);
+                    pictureBox2.BackgroundImage = code.GetGraphic(50);
                 }
 
                 db.close(dr);
