@@ -243,15 +243,12 @@ namespace Gestion_de_salle_de_sport
                         db.Excute("insert into demande(idmembre,id_food,date_demande,quantite) values('" + cb_member.SelectedValue.ToString() + "','" + dt1.Rows[i].Cells[0].Value.ToString() + "',GetDate()," + dt1.Rows[i].Cells[2].Value.ToString() + ")");
 
                     }
-                    dt1.Rows.Clear();
+                    //dt1.Rows.Clear();
                 }
             }
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -274,7 +271,7 @@ namespace Gestion_de_salle_de_sport
                 labelPrice.Text = dr["prix"].ToString();
                 labelTitle.Text = dr["name_food"].ToString();
                 lblAdd.Tag = dr["id_food"].ToString();
-
+                numericUpDownQte.Tag = dr["id_food"].ToString();
 
                 Panel pn = new Panel();
                 pn = duplicatePanel(panel2);

@@ -13,7 +13,7 @@ namespace Gestion_de_salle_de_sport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new login());
         }
     }
 }
